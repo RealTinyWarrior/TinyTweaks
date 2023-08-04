@@ -55,6 +55,7 @@ export const textArray: string[] = [
     "Nice to meet you :)",
     "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
     "Thanks for visiting :)",
+    "Glad to see you here!",
 ];
 
 export const emojies: string[] = [
