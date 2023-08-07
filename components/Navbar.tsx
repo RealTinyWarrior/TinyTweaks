@@ -1,8 +1,8 @@
-import { pointerOfNav as pointer, emojies } from "@data.ts";
+import { pointerOfNav, emojies } from "@data.ts";
 import banner from "@image/banner.png";
 import Image from "next/image";
 import Link from "next/link";
-import Emoji from "./Emoji.tsx";
+import Emoji from "./emoji.tsx";
 
 const Navbar = ({ place }: { place: string }) => {
     return (
@@ -17,7 +17,7 @@ const Navbar = ({ place }: { place: string }) => {
 
                     <nav id="nav-navigation">
                         {["home", "docs", "apps"].map((elm) => (
-                            <Link key={elm} href={`/${elm === "home" ? "/" : elm}`} style={elm === place ? pointer : {}}>
+                            <Link key={elm} href={`/${elm === "home" ? "/" : elm}`} style={elm === place ? pointerOfNav : {}}>
                                 <span>{elm.toUpperCase()}</span>
                             </Link>
                         ))}

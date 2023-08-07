@@ -1,7 +1,7 @@
-import Navbar from "@components/Navbar.tsx";
-import DisplayShow from "@components/DisplayShow";
-import StickyBar from "@components/StickyBar";
-import HomeLeftBoard from "@components/HomeLeftBoard";
+import HomeLeftBoard from "@components/homeleftboard";
+import StickyBar from "@components/stickybar";
+import DisplayShow from "@components/displayshow";
+import Navbar from "@components/navbar";
 import { textArray } from "@data";
 
 let selectedText = textArray[Math.round(Math.random() * (textArray.length - 1))];
@@ -40,4 +40,3 @@ const Home = () => {
 };
 
 export default Home;
-export { selectedText };
