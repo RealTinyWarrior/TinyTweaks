@@ -29,9 +29,7 @@ const RootLayout = ({ children }: { children: React.ReactElement }) => {
                 />
             </head>
 
-            <body>
-                <main className="app">{children}</main>
-            </body>
+            <body>{children}</body>
         </html>
     );
 };

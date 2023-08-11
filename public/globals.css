@@ -76,9 +76,9 @@
 }
 
 #show-stick {
-    height: clamp(1px, 13vw, 52px);
+    height: clamp(1px, 15vw, 58px);
     width: auto;
-    background-color: rgba(14, 14, 14, 0.8);
+    background-color: rgba(14, 14, 14, 0.85);
     justify-content: space-between;
     align-items: center;
     display: flex;
@@ -88,7 +88,6 @@
     top: 0;
     box-shadow: 0px 0px 8px 2px rgb(20, 20, 20);
     z-index: 1;
-    border-bottom: 0.1vw solid black;
     backdrop-filter: blur(4px);
 }
 
@@ -99,7 +98,7 @@
     left: clamp(1vw, 5px, 2vw);
     display: inline-block;
     height: 100%;
-    top: 1%;
+    top: 8%;
 }
 
 #light-pic {
@@ -172,8 +171,6 @@
     height: clamp(1px, 460px, 94vw);
     background-size: cover;
     background-position: bottom;
-    margin-left: auto;
-    margin-right: auto;
     width: 100%;
     background-image: var(--home-image);
 }
@@ -269,6 +266,7 @@
     width: 92%;
     height: 47.5%;
     border: 1px solid lime;
+    max-width: 1200px;
 }
 
 #top-cont-board {
@@ -303,14 +301,15 @@
     top: 6%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    max-width: 1920px;
+    justify-content: center;
+    column-gap: 30px;
 }
 
 #home-recent {
     height: 45.5%;
     width: 92%;
     border: 1px solid lime;
+    max-width: 610px;
 }
 
 #home-in1 {
@@ -332,8 +331,8 @@
 body {
     margin: 0;
     padding: 0;
-    min-height: 100vh;
     overflow-x: hidden;
+    background-color: white;
 
     --home-image: url(../image/black_banner.png);
     --cboard-color: rgb(30, 30, 30);
@@ -351,7 +350,7 @@ body.light {
     --home-shade: 0 0 15px darkgreen;
     --font-color: black;
     --home-image: url(../image/white_banner.png);
-    --nav-left-pos: 63%;
+    --nav-left-pos: 62%;
     --cboard-color: #f5f5f5;
     --nav-modeball: #4289f5;
     --home-bng: linear-gradient(white, white);
@@ -360,7 +359,7 @@ body.light {
     --nav-shadow: 0.02em 0.02em 0 rgba(100, 100, 255, 0.5), 0.05em 0.05em 0 rgba(70, 70, 70, 1);
 }
 
-@media (orientation: landscape) {
+@media only screen and (min-width: 800px) {
     #home-in1 {
         display: none;
     }
@@ -380,7 +379,7 @@ body.light {
 
     #tcb-hold {
         height: 96.5%;
-        width: 60%;
+        width: 57%;
     }
 
     #top-cont-board {
