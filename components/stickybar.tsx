@@ -6,6 +6,8 @@ import lightdark from "@image/lightdark.svg";
 import Image from "next/image";
 import React from "react";
 
+type Props = { place: "home" | "docs" | "apps" };
+
 let Icon = ({ place }: { place: string }) =>
     place === "home" ? (
         <FaHome color="white" id="home-icon" />
@@ -15,9 +17,9 @@ let Icon = ({ place }: { place: string }) =>
         <TbAppsOff color="white" id="home-icon" />
     );
 
-const StickyBar = ({ place }: { place: string }) => {
+const StickyBar = ({ place }: Props) => {
     return (
-        <div id="show-stick">
+        <div id="sticky-bar">
             <div id="text-place">
                 &nbsp;
                 <Icon place={place} />

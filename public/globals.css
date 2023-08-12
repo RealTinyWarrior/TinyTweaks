@@ -15,6 +15,14 @@
     width: auto;
 }
 
+#home-details {
+    height: 100%;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid lime;
+    font-family: "Play", sans-serif;
+}
+
 #nav-cont {
     left: 5vw;
     height: 90%;
@@ -75,10 +83,10 @@
     }
 }
 
-#show-stick {
+#sticky-bar {
     height: clamp(1px, 15vw, 58px);
     width: auto;
-    background-color: rgba(14, 14, 14, 0.85);
+    background-color: rgba(14, 14, 14, 0.87);
     justify-content: space-between;
     align-items: center;
     display: flex;
@@ -99,18 +107,6 @@
     display: inline-block;
     height: 100%;
     top: 8%;
-}
-
-#light-pic {
-    max-height: 70%;
-    position: relative;
-    display: inline-grid;
-    right: 4.5vw;
-}
-
-#home-d-cover > div {
-    position: relative;
-    display: flex;
 }
 
 #w-text-c p {
@@ -144,35 +140,15 @@
     top: clamp(1px, 3vw, 14px);
 }
 
-@keyframes visual {
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.25;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes spins {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
 #display-show {
-    height: clamp(1px, 460px, 94vw);
+    height: clamp(1px, 440px, 91vw);
     background-size: cover;
     background-position: bottom;
     width: 100%;
     background-image: var(--home-image);
+    position: relative;
+    bottom: clamp(1px, 15vw, 58px);
+    padding-top: clamp(1px, 15vw, 58px);
 }
 
 #home-center-text {
@@ -205,7 +181,7 @@
     background-color: var(--nav-modeball);
 }
 
-#mode-s-switch {
+#mode-switch {
     height: 71%;
     width: 40%;
     border: 0.5px solid rgb(220, 220, 220);
@@ -216,7 +192,7 @@
     cursor: pointer;
 }
 
-#mode-s-switch div {
+#mode-switch div {
     height: 89%;
     width: 40%;
     background-color: white;
@@ -224,42 +200,6 @@
     position: relative;
     transition: 0.16s;
     left: var(--nav-left-pos);
-}
-
-#home-input {
-    border: 1px solid lime;
-}
-
-#home-input input {
-    height: 50%;
-    width: 100%;
-}
-
-#text-place img {
-    height: 60%;
-    display: inline-block;
-}
-
-#text-place p {
-    display: inline-block;
-    margin: auto;
-    top: 5%;
-    transform: translateY(-5%);
-}
-
-#mode-shift-image {
-    height: 130%;
-    width: auto;
-}
-
-#nav-app-logo {
-    height: 100%;
-    width: auto;
-}
-
-#home-icon {
-    position: relative;
-    top: 6%;
 }
 
 #tcb-hold {
@@ -294,6 +234,13 @@
     border: 1px solid lime;
 }
 
+#home-recent {
+    height: 45.5%;
+    width: 92%;
+    border: 1px solid lime;
+    max-width: 610px;
+}
+
 #home-content-box {
     height: 140%;
     width: 100%;
@@ -305,11 +252,35 @@
     column-gap: 30px;
 }
 
-#home-recent {
-    height: 45.5%;
-    width: 92%;
+#text-place img {
+    height: 60%;
+    display: inline-block;
+}
+
+#text-place p {
+    display: inline-block;
+    margin: auto;
+    top: 5%;
+    transform: translateY(-5%);
+}
+
+#mode-shift-image {
+    height: 130%;
+    width: auto;
+}
+
+#nav-app-logo {
+    height: 100%;
+    width: auto;
+}
+
+#home-icon {
+    position: relative;
+    top: 6%;
+}
+
+#home-input {
     border: 1px solid lime;
-    max-width: 610px;
 }
 
 #home-in1 {
@@ -321,11 +292,34 @@
 }
 
 #home-in2 > input {
-    width: 90%;
+    width: 99%;
 }
 
 #home-in1 > input {
-    width: 90%;
+    width: 99%;
+}
+
+@keyframes visual {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.25;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes spins {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 body {
@@ -350,7 +344,7 @@ body.light {
     --home-shade: 0 0 15px darkgreen;
     --font-color: black;
     --home-image: url(../image/white_banner.png);
-    --nav-left-pos: 62%;
+    --nav-left-pos: 62.5%;
     --cboard-color: #f5f5f5;
     --nav-modeball: #4289f5;
     --home-bng: linear-gradient(white, white);
@@ -362,6 +356,10 @@ body.light {
 @media only screen and (min-width: 800px) {
     #home-in1 {
         display: none;
+    }
+
+    #home-details {
+        height: 70%;
     }
 
     #home-in2 {

@@ -4,7 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import Emoji from "./emoji.tsx";
 
-const Navbar = ({ place }: { place: string }) => {
+type Props = { place: "home" | "docs" | "apps" };
+
+const Navbar = ({ place }: Props) => {
     return (
         <>
             <div id="nav-style">
