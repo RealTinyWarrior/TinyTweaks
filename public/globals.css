@@ -40,6 +40,9 @@
     float: left;
     clear: left;
     white-space: nowrap;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
 }
 
 #nav-title span {

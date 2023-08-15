@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Emoji from "./emoji.tsx";
 
-type Props = { place: "home" | "docs" | "apps" };
+type Props = { place: "home" | "blogs" | "apps" };
 
 const Navbar = ({ place }: Props) => {
     return (
@@ -13,12 +13,12 @@ const Navbar = ({ place }: Props) => {
                 <Image src={banner} alt="Website Banner" id="nav-logo" />
 
                 <div id="nav-cont">
-                    <b id="nav-title">
+                    <h1 id="nav-title">
                         TinyTweaks <Emoji initialEmoji={emojies[Math.round(Math.random() * (emojies.length - 1))]} />
-                    </b>
+                    </h1>
 
                     <nav id="nav-navigation">
-                        {["home", "docs", "apps"].map((elm) => (
+                        {["home", "blogs", "apps"].map((elm) => (
                             <Link key={elm} href={`/${elm === "home" ? "/" : elm}`} style={elm === place ? pointerOfNav : {}}>
                                 <span>{elm.toUpperCase()}</span>
                             </Link>

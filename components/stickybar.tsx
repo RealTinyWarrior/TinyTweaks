@@ -1,17 +1,17 @@
-import { FaHome } from "react-icons/fa";
 import { CgFileDocument } from "react-icons/cg";
+import { HiCode } from "react-icons/hi";
 import { TbAppsOff } from "react-icons/tb";
 import ModeSwitch from "./modeswitch.tsx";
 import lightdark from "@image/lightdark.svg";
 import Image from "next/image";
 import React from "react";
 
-type Props = { place: "home" | "docs" | "apps" };
+type Props = { place: "home" | "blogs" | "apps" };
 
 let Icon = ({ place }: { place: string }) =>
     place === "home" ? (
-        <FaHome color="white" id="home-icon" />
-    ) : place === "docs" ? (
+        <HiCode color="white" id="home-icon" />
+    ) : place === "blogs" ? (
         <CgFileDocument color="white" id="home-icon" />
     ) : (
         <TbAppsOff color="white" id="home-icon" />
