@@ -2,7 +2,7 @@ import { pointerOfNav, emojies } from "@data.ts";
 import banner from "@image/banner.png";
 import Image from "next/image";
 import Link from "next/link";
-import Emoji from "./emoji.tsx";
+import Emoji from "./Emoji.tsx";
 
 type Props = { place: "home" | "blogs" | "apps" };
 

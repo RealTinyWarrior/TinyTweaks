@@ -1,8 +1,8 @@
-import HomeLeftBoard from "@components/homeleftboard.tsx";
-import StickyBar from "@components/stickybar.tsx";
-import DisplayShow from "@components/displayshow.tsx";
-import Navbar from "@components/navbar.tsx";
-import HomeInput from "@components/homeinput";
+import HomeLeftBoard from "@components/HomeLeftBoard";
+import StickyBar from "@components/Stickybar";
+import DisplayShow from "@components/DisplayShow";
+import Navbar from "@components/Navbar";
+import HomeInput from "@components/HomeInput";
 import { textArray } from "@data.ts";
 
 let selectedText = textArray[Math.round(Math.random() * (textArray.length - 1))];

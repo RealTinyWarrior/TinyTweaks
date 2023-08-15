@@ -1,7 +1,7 @@
 import { CgFileDocument } from "react-icons/cg";
 import { HiCode } from "react-icons/hi";
 import { TbAppsOff } from "react-icons/tb";
-import ModeSwitch from "./modeswitch.tsx";
+import ModeSwitch from "./ModeSwitch.tsx";
 import lightdark from "@image/lightdark.svg";
 import Image from "next/image";
 import React from "react";
