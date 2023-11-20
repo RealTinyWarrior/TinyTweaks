@@ -5,7 +5,8 @@ import { textArray } from "@data.ts";
 
 let isClearing = true;
 
-const DisplayShow = ({ text }: { text: string }) => {
+const DisplayShow = () => {
+    let text = textArray[Math.round(Math.random() * (textArray.length - 1))];
     const [sayText, setSayText] = useState(text);
 
     useEffect(() => {
@@ -60,16 +61,7 @@ const DisplayShow = ({ text }: { text: string }) => {
         }, 2000);
     }, []);
 
-    return (
-        <div id="home-center-text">
-            <div id="w-text-c">
-                <p>
-                    &nbsp;{sayText}
-                    <span>_</span>
-                </p>
-            </div>
-        </div>
-    );
+    return <>{sayText}</>;
 };
 
 export default DisplayShow;

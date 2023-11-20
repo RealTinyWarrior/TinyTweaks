@@ -11,6 +11,8 @@ type LangType = {
     go: string;
 }[];
 
+export const command: string[] = [`"highlight <color>"`, `"barrelroll"`, `"refresh"`, `anything`, `something`];
+
 export const langLinks: LangType = [
     {
         url: "https://cdn3.emoji.gg/emojis/2057-javascript-logo.png",
@@ -40,14 +42,10 @@ export const textArray: string[] = [
     "Greetings ;)",
     "Made By TinyWarrior :)",
     "Hello There!",
-    "Update incoming!",
     "What's up?",
     "Hi Friend!",
     "Welcome Here!:)",
-    "Enjoy your trip!:D",
     "Welcome to my website!",
-    "Enjoy your stay! :)",
-    "Syntax error x_x",
     "o_O",
     "Do people even read this?",
     "Aha! A Human! Hello :)",

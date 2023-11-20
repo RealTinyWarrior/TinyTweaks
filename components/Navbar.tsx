@@ -10,7 +10,7 @@ const Navbar = ({ place }: Props) => {
     return (
         <>
             <div id="nav-style">
-                <Image src={banner} alt="Website Banner" id="nav-logo" />
+                <Image priority src={banner} alt="Website Banner" id="nav-logo" />
 
                 <div id="nav-cont">
                     <h1 id="nav-title">

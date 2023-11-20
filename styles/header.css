@@ -17,10 +17,16 @@
 
 #home-details {
     height: 100%;
-    width: 100%;
-    max-width: 300px;
-    border: 1px solid lime;
+    width: 92%;
+    max-width: 340px;
     font-family: "Play", sans-serif;
+    margin-left: 2%;
+    color: var(--font-color);
+    border: 1px solid transparent;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3.8%;
 }
 
 #nav-cont {
@@ -28,6 +34,7 @@
     height: 90%;
     width: 68vw;
     position: relative;
+    transition: left 0.3s;
 }
 
 #nav-title {
@@ -89,7 +96,7 @@
 #sticky-bar {
     height: clamp(1px, 15vw, 58px);
     width: auto;
-    background-color: rgba(14, 14, 14, 0.87);
+    background-color: rgba(14, 14, 14, 0.85);
     justify-content: space-between;
     align-items: center;
     display: flex;
@@ -152,6 +159,7 @@
     position: relative;
     bottom: clamp(1px, 15vw, 58px);
     padding-top: clamp(1px, 15vw, 58px);
+    transition: background-image 0.3s;
 }
 
 #home-center-text {
@@ -197,7 +205,7 @@
 
 #mode-switch div {
     height: 89%;
-    width: 40%;
+    width: 46%;
     background-color: white;
     border-radius: 50px;
     position: relative;
@@ -208,8 +216,11 @@
 #tcb-hold {
     width: 92%;
     height: 47.5%;
-    border: 1px solid lime;
     max-width: 1200px;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: clamp(1px, 25px, 3vw);
 }
 
 #top-cont-board {
@@ -220,7 +231,6 @@
     display: flex;
     background-color: var(--cboard-color);
     height: 73%;
-    border: 1px solid lime;
 }
 
 #tcb-leftbox {
@@ -229,26 +239,25 @@
     border-radius: clamp(1px, 25px, 3vw);
     right: clamp(1px, 9%, 90px);
     height: 60%;
+    transition: 0.3s;
 }
 
 #tcb-contentbox {
     height: 100%;
     width: 70%;
-    border: 1px solid lime;
 }
 
 #home-recent {
     height: 45.5%;
     width: 92%;
     border: 1px solid lime;
-    max-width: 610px;
 }
 
 #home-content-box {
     height: 140%;
     width: 100%;
     position: relative;
-    top: 6%;
+    top: 8%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -277,29 +286,151 @@
     width: auto;
 }
 
+#home-in2 {
+    display: none;
+    height: 28%;
+    width: 100%;
+}
+
+#home-in1 {
+    height: 25%;
+    display: block;
+    top: 74.5%;
+    position: relative;
+}
+
 #home-icon {
     position: relative;
     top: 6%;
 }
 
-#home-input {
-    border: 1px solid lime;
-}
-
-#home-in1 {
-    display: block;
+#home-in1 input,
+#home-in2 input {
+    height: 65%;
+    width: 65.9%;
+    border: clamp(1px, 2px, 0.1vw) solid #344052;
+    outline: none;
+    border-top-left-radius: clamp(1px, 8px, 2vw);
+    border-bottom-left-radius: clamp(1px, 8px, 2vw);
+    font-family: "Play", sans-serif;
+    background-color: var(--input-back);
+    margin-left: 2%;
+    padding-left: 10.5%;
+    font-size: clamp(1px, 18px, 6vw);
+    color: var(--font-color);
 }
 
 #home-in2 {
-    display: none;
+    position: relative;
+    bottom: 13%;
 }
 
-#home-in2 > input {
-    width: 99%;
+#home-in1 input {
+    margin-left: 3.7%;
 }
 
-#home-in1 > input {
-    width: 99%;
+#home-in1 input:focus ~ span,
+#home-in2 input:focus ~ span,
+#home-in1 input:valid ~ span,
+#home-in2 input:valid ~ span {
+    transform: translateY(-150%);
+    background: linear-gradient(to right, rgb(83, 126, 244) 3.8%, rgb(158, 70, 206));
+    border-radius: 2px;
+    font-size: clamp(1px, 14px, 2.5vw);
+    color: black;
+}
+
+#home-in1 input:focus,
+#home-in2 input:focus,
+#home-in1 input:valid,
+#home-in2 input:valid {
+    border-color: rgb(158, 70, 206);
+}
+
+#home-in1 span,
+#home-in2 span {
+    position: absolute;
+    font-family: "Play", sans-serif;
+    color: #344052;
+    transition: 0.5s;
+    margin-left: clamp(14%, 4.2vw, 90px);
+    font-size: clamp(1px, 18px, 3vw);
+    pointer-events: none;
+    padding-bottom: 0.6%;
+    user-select: none;
+}
+
+#home-in1 div,
+#home-in2 div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+#bash-icon-logo {
+    height: 43%;
+    width: 19.2%;
+    pointer-events: none;
+    position: absolute;
+    color: var(--font-color);
+}
+
+#send-input {
+    height: 68%;
+    width: 13.7%;
+    background: linear-gradient(to right, rgb(83, 126, 244) 3.8%, rgb(158, 70, 206));
+    margin-left: 1px;
+    border-top-right-radius: clamp(1px, 8px, 2vw);
+    border-bottom-right-radius: clamp(1px, 8px, 2vw);
+    border: clamp(1px, 2px, 0.1vw) solid #344052;
+    cursor: pointer;
+}
+
+#send-input-icon {
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+
+#hd-title {
+    font-size: clamp(1px, 32px, 5.2vw);
+    font-family: "rubik", sans-serif;
+    margin: 0;
+    white-space: nowrap;
+    font-weight: bold;
+    letter-spacing: 1.7px;
+}
+
+#hd-smalltext {
+    margin: 0;
+    color: #555c64;
+    font-size: clamp(1px, 16px, 4vw);
+}
+
+#home-desc {
+    margin: 0;
+    font-size: clamp(1px, 14px, 3.5vw);
+}
+
+.barrelClass {
+    animation: barrelroll 2s linear;
+}
+
+* {
+    transition: color 80ms;
+}
+
+@keyframes barrelroll {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes visual {
@@ -329,15 +460,17 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: white;
+    background-color: var(--webcolor);
+    scroll-behavior: smooth;
 
     --home-image: url(../image/black_banner.png);
-    --cboard-color: rgb(30, 30, 30);
+    --cboard-color: #0c0b16;
     --nav-left-pos: 2%;
     --font-color: white;
-    --home-shade: 0 0 15px lime;
     --nav-modeball: rgba(164, 4, 236, 0.82);
     --home-bng: linear-gradient(#18141c, #18141c);
+    --webcolor: #121a26;
+    --input-back: #121212;
 
     --nav-shadow: 0.04em 0.04em 0 rgba(10, 10, 10, 1), 0.11em 0.11em 0 rgba(10, 10, 10, 1);
     --nav-bng: linear-gradient(39deg, rgb(29, 7, 64) 8.5%, rgb(253, 105, 139) 94.2%, black 1%);
@@ -347,26 +480,45 @@ body.light {
     --home-shade: 0 0 15px darkgreen;
     --font-color: black;
     --home-image: url(../image/white_banner.png);
-    --nav-left-pos: 62.5%;
-    --cboard-color: #f5f5f5;
+    --nav-left-pos: 56%;
+    --cboard-color: white;
     --nav-modeball: #4289f5;
-    --home-bng: linear-gradient(white, white);
+    --webcolor: #eeeeee;
+    --input-back: #eef5ff;
 
     --nav-bng: linear-gradient(39deg, #3232f5, #41b7fb, #85d2ff 94.2%, blue 1%);
     --nav-shadow: 0.02em 0.02em 0 rgba(100, 100, 255, 0.5), 0.05em 0.05em 0 rgba(70, 70, 70, 1);
 }
 
-@media only screen and (min-width: 800px) {
+@media print {
+    * {
+        color: black;
+        box-shadow: none !important;
+        border-color: black;
+    }
+
+    #mode-switch div,
+    #top-cont-board,
+    #sticky-bar,
+    #tcb-hold,
+    #mode-switch {
+        border: 1px solid black;
+    }
+}
+
+@media only screen and (min-width: 850px) {
     #home-in1 {
         display: none;
     }
 
     #home-details {
         height: 70%;
+        padding-top: 1.2%;
     }
 
     #home-in2 {
         display: block;
+        position: relative;
     }
 
     #home-content-box {
@@ -374,16 +526,27 @@ body.light {
     }
 
     #home-recent {
-        height: 96.5%;
+        height: 101%;
         width: 29%;
+        max-width: 610px;
     }
 
     #tcb-hold {
-        height: 96.5%;
+        height: 101%;
         width: 57%;
     }
 
     #top-cont-board {
         height: 100%;
+    }
+
+    #home-in1 input,
+    #home-in2 input {
+        padding-left: 12.5%;
+    }
+
+    #home-in1 span,
+    #home-in2 span {
+        margin-left: clamp(15%, 5vw, 90px);
     }
 }

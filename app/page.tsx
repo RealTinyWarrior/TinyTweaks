@@ -1,11 +1,11 @@
 import HomeLeftBoard from "@components/HomeLeftBoard";
 import StickyBar from "@components/Stickybar";
-import DisplayShow from "@components/DisplayShow";
 import Navbar from "@components/Navbar";
 import HomeInput from "@components/HomeInput";
-import { textArray } from "@data.ts";
+import "@styles/header.css";
+import dynamic from "next/dynamic";
 
-let selectedText = textArray[Math.round(Math.random() * (textArray.length - 1))];
+const DisplayShow = dynamic(() => import("@components/DisplayShow"), { ssr: false });
 
 const Home = () => {
     return (
@@ -14,7 +14,15 @@ const Home = () => {
             <StickyBar place="home" />
 
             <div id="display-show">
-                <DisplayShow text={selectedText} />
+                <div id="home-center-text">
+                    <div id="w-text-c">
+                        <p>
+                            &nbsp;
+                            <DisplayShow />
+                            <span>_</span>
+                        </p>
+                    </div>
+                </div>
 
                 <div id="home-content-box">
                     <div id="tcb-hold">
@@ -22,20 +30,26 @@ const Home = () => {
                             <HomeLeftBoard />
 
                             <div id="tcb-contentbox">
-                                <div id="home-details"></div>
+                                <div id="home-details">
+                                    <p id="hd-smalltext">TinyTweaks</p>
+                                    <p id="hd-title">HI, I'M TINY!</p>
 
-                                <HomeInput ui={"small"} />
+                                    <p id="home-desc">
+                                        Welcome to my website TinyTweaks! I'm TinyWarrior, a person who heavily enjoys
+                                        programming. I made this website to share my projects online!
+                                    </p>
+                                </div>
+
+                                <HomeInput ui={"large"} />
                             </div>
                         </div>
 
-                        <HomeInput ui={"large"} />
+                        <HomeInput ui={"small"} />
                     </div>
 
                     <div id="home-recent"></div>
                 </div>
             </div>
-
-            <div style={{ height: "800px" }}></div>
         </>
     );
 };
