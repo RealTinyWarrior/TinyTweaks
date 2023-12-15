@@ -35,7 +35,7 @@ const Home = () => {
                                     <p id="hd-title">HI, I'M TINY!</p>
 
                                     <p id="home-desc">
-                                        Welcome to my website TinyTweaks! I'm TinyWarrior, a person who heavily enjoys
+                                        Welcome to TinyTweaks! I'm TinyWarrior, a person who heavily enjoys
                                         programming. I made this website to share my projects online!
                                     </p>
                                 </div>
