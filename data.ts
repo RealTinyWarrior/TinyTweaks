@@ -11,7 +11,7 @@ type LangType = {
     go: string;
 }[];
 
-export const command: string[] = [`"highlight <color>"`, `"barrelroll"`, `"refresh"`, `anything`, `something`];
+export const command: string[] = ["`barrelroll`", "`visicord`"];
 
 export const langLinks: LangType = [
     {

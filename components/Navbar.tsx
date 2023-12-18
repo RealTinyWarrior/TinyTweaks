@@ -1,9 +1,10 @@
 import { pointerOfNav, emojies } from "@data.ts";
 import banner from "@image/banner.png";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
-import Emoji from "./Emoji.tsx";
 
+const Emoji = dynamic(() => import("@components/Emoji"), { ssr: false });
 type Props = { place: "home" | "blogs" | "apps" };
 
 const Navbar = ({ place }: Props) => {
@@ -14,12 +15,16 @@ const Navbar = ({ place }: Props) => {
 
                 <div id="nav-cont">
                     <h1 id="nav-title">
-                        TinyTweaks <Emoji initialEmoji={emojies[Math.round(Math.random() * (emojies.length - 1))]} />
+                        TinyTweaks <Emoji />
                     </h1>
 
                     <nav id="nav-navigation">
                         {["home", "blogs", "apps"].map((elm) => (
-                            <Link key={elm} href={`/${elm === "home" ? "/" : elm}`} style={elm === place ? pointerOfNav : {}}>
+                            <Link
+                                key={elm}
+                                href={`/${elm === "home" ? "/" : elm}`}
+                                style={elm === place ? pointerOfNav : {}}
+                            >
                                 <span>{elm.toUpperCase()}</span>
                             </Link>
                         ))}

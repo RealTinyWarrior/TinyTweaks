@@ -1,10 +1,9 @@
 "use client";
-
 import { useState } from "react";
 import { emojies } from "@data.ts";
 
-const Emoji = ({ initialEmoji }: { initialEmoji: string }) => {
-    const [emoji, setEmoji] = useState(initialEmoji);
+const Emoji = () => {
+    const [emoji, setEmoji] = useState(emojies[Math.round(Math.random() * (emojies.length - 1))]);
 
     return (
         <span

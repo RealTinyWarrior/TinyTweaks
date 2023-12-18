@@ -14,7 +14,13 @@ const HomeInput = ({ ui }: { ui: "small" | "large" }) => {
     return (
         <div id={`home-in${ui === "small" ? "1" : "2"}`}>
             <div>
-                <input onChange={(e) => setValue(e.target.value)} value={value} title="" type="text" required />
+                <input
+                    onChange={(e) => setValue(e.target.value)}
+                    value={value}
+                    title=""
+                    type="text"
+                    required
+                />
 
                 <span suppressHydrationWarning>&nbsp;&nbsp;Type {initialCmd}&nbsp;&nbsp;</span>
                 <SiGnubash id="bash-icon-logo" />
@@ -34,23 +40,8 @@ const HomeInput = ({ ui }: { ui: "small" | "large" }) => {
 function inputEffect(value: string, getRandomCmd: () => void, setValue: (val: string) => void) {
     if (value.length <= 0) return;
 
-    if (value.startsWith("refresh")) location.reload();
-    else if (value.startsWith("highlight")) {
-        const DIV = document.querySelectorAll("div");
-
-        DIV.forEach((div) => {
-            div.style.border = `1px solid ${value.split(" ")[1] || "lime"}`;
-        });
-
-        getRandomCmd();
-    } else if (value.startsWith("dehighlight")) {
-        const DIV = document.querySelectorAll("div");
-
-        DIV.forEach((div) => {
-            div.style.border = `0`;
-        });
-
-        getRandomCmd();
+    if (value.startsWith("visicord")) {
+        window.location.href = "https://visicord.vercel.app";
     } else if (value.startsWith("barrelroll")) {
         const element = document.querySelector("body");
 
