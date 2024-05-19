@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import style from "@styles/header.module.css";
 
 const HomeLeftBoard = () => {
     const boxRef = React.useRef<HTMLDivElement>(null);
@@ -14,7 +15,7 @@ const HomeLeftBoard = () => {
         };
     }, []);
 
-    return <div id="tcb-leftbox" ref={boxRef} style={{ width: boxState }}></div>;
+    return <div id={style.tcb_leftbox} ref={boxRef} style={{ width: boxState }}></div>;
 };
 
 export default HomeLeftBoard;

@@ -1,5 +1,6 @@
-import { pointerOfNav, emojies } from "@data.ts";
-import banner from "@image/banner.png";
+import style from "@styles/header.module.css";
+import { pointerOfNav } from "@data";
+import banner from "@image/nav_banner.png";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,15 +11,17 @@ type Props = { place: "home" | "blogs" | "apps" };
 const Navbar = ({ place }: Props) => {
     return (
         <>
-            <div id="nav-style">
-                <Image priority src={banner} alt="Website Banner" id="nav-logo" />
+            <div id={style.nav_style}>
+                <Link href="/" id={style.nav_logo_cont}>
+                    <Image priority src={banner} alt="Website Banner" id={style.nav_logo} />
+                </Link>
 
-                <div id="nav-cont">
-                    <h1 id="nav-title">
+                <div id={style.nav_cont}>
+                    <h1 id={style.nav_title}>
                         TinyTweaks <Emoji />
                     </h1>
 
-                    <nav id="nav-navigation">
+                    <nav id={style.nav_navigation}>
                         {["home", "blogs", "apps"].map((elm) => (
                             <Link
                                 key={elm}

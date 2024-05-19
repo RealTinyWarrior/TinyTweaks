@@ -1,18 +1,22 @@
 "use client";
 
-import { command } from "@data";
 import { useState } from "react";
 import { SiGnubash } from "react-icons/si";
 import { TbCubeSend } from "react-icons/tb";
+import { command, locations, customCommands } from "@data";
+import style from "@styles/header.module.css";
 
 const HomeInput = ({ ui }: { ui: "small" | "large" }) => {
     const [value, setValue] = useState("");
 
-    const getRandomCmd = () => setInitialCmd(command[Math.round(Math.random() * (command.length - 1))]);
-    const [initialCmd, setInitialCmd] = useState(command[Math.round(Math.random() * (command.length - 1))]);
+    const getRandomCmd = () =>
+        setInitialCmd("'" + command[Math.round(Math.random() * (command.length - 1))] + "'");
+    const [initialCmd, setInitialCmd] = useState(
+        "'" + command[Math.round(Math.random() * (command.length - 1))] + "'"
+    );
 
     return (
-        <div id={`home-in${ui === "small" ? "1" : "2"}`}>
+        <div id={style[`home_in${ui === "small" ? "1" : "2"}`]}>
             <div>
                 <input
                     onChange={(e) => setValue(e.target.value)}
@@ -23,14 +27,14 @@ const HomeInput = ({ ui }: { ui: "small" | "large" }) => {
                 />
 
                 <span suppressHydrationWarning>&nbsp;&nbsp;Type {initialCmd}&nbsp;&nbsp;</span>
-                <SiGnubash id="bash-icon-logo" />
+                <SiGnubash id={style.bash_icon_logo} />
 
                 <section
-                    id="send-input"
+                    id={style.send_input}
                     title="Send input"
                     onClick={() => inputEffect(value, getRandomCmd, (val) => setValue(val))}
                 >
-                    <TbCubeSend id="send-input-icon" />
+                    <TbCubeSend id={style.send_input_icon} />
                 </section>
             </div>
         </div>
@@ -38,22 +42,23 @@ const HomeInput = ({ ui }: { ui: "small" | "large" }) => {
 };
 
 function inputEffect(value: string, getRandomCmd: () => void, setValue: (val: string) => void) {
+    value = value.trim().toLowerCase();
     if (value.length <= 0) return;
 
-    if (value.startsWith("visicord")) {
-        window.location.href = "https://visicord.vercel.app";
-    } else if (value.startsWith("barrelroll")) {
-        const element = document.querySelector("body");
+    if (customCommands.includes(value)) {
+        if (value == "barrelroll") {
+            const element = document.querySelector("body");
 
-        element?.classList.add("barrelClass");
+            element?.classList.add("barrelClass");
 
-        setTimeout(() => {
-            element?.classList.remove("barrelClass");
-        }, 2100);
+            setTimeout(() => {
+                element?.classList.remove("barrelClass");
+            }, 2100);
 
-        getRandomCmd();
-    } else getRandomCmd();
-
+            getRandomCmd();
+        }
+    } else if (command.includes(value)) window.location.href = locations[command.indexOf(value)]?.toString();
+    else getRandomCmd();
     setValue("");
 }
 

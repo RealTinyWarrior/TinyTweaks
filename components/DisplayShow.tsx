@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { textArray } from "@data.ts";
+import { textArray } from "@data";
 
 let isClearing = true;
 

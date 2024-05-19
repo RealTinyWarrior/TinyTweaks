@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { emojies } from "@data.ts";
+import { emojies } from "@data";
 
 const Emoji = () => {
     const [emoji, setEmoji] = useState(emojies[Math.round(Math.random() * (emojies.length - 1))]);

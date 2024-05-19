@@ -1,4 +1,4 @@
-#nav-style {
+#nav_style {
     height: clamp(30px, 28vw, 125px);
     width: auto;
     display: flex;
@@ -8,14 +8,18 @@
     background: var(--nav-bng);
 }
 
-#nav-logo {
+#nav_logo_cont {
     height: 90%;
     position: relative;
     left: 2vw;
+}
+
+#nav_logo {
+    height: 100%;
     width: auto;
 }
 
-#home-details {
+#home_details {
     height: 100%;
     width: 92%;
     max-width: 340px;
@@ -29,7 +33,7 @@
     gap: 3.8%;
 }
 
-#nav-cont {
+#nav_cont {
     left: 5vw;
     height: 90%;
     width: 68vw;
@@ -37,7 +41,7 @@
     transition: left 0.3s;
 }
 
-#nav-title {
+#nav_title {
     text-shadow: var(--nav-shadow);
     top: clamp(1px, 9px, 2.3vw);
     position: relative;
@@ -52,14 +56,14 @@
     padding: 0;
 }
 
-#nav-title span {
+#nav_title span {
     font-size: clamp(5px, 16px, 3vw);
     position: relative;
     bottom: 0.5vh;
     cursor: pointer;
 }
 
-#nav-navigation {
+#nav_navigation {
     height: 25%;
     position: relative;
     top: 18%;
@@ -75,7 +79,7 @@
     font-family: "Play", sans-serif;
 }
 
-#nav-navigation > * {
+#nav_navigation > * {
     height: 90%;
     width: 28%;
     display: grid;
@@ -93,7 +97,7 @@
     }
 }
 
-#sticky-bar {
+#sticky_bar {
     height: clamp(1px, 15vw, 58px);
     width: auto;
     background-color: rgba(14, 14, 14, 0.85);
@@ -106,10 +110,9 @@
     top: 0;
     box-shadow: 0px 0px 8px 2px rgb(20, 20, 20);
     z-index: 1;
-    backdrop-filter: blur(4px);
 }
 
-#text-place {
+#text_place {
     display: inline-grid;
     position: relative;
     font-size: clamp(2px, 10vw, 40px);
@@ -119,7 +122,7 @@
     top: 8%;
 }
 
-#w-text-c p {
+#w_text_c p {
     position: relative;
     color: lime;
     left: clamp(1px, 5px, 0.5vw);
@@ -128,14 +131,14 @@
     text-shadow: var(--home-shade);
 }
 
-#w-text-c > p > span {
+#w_text_c > p > span {
     animation: visual 2.8s infinite;
     position: relative;
     right: -2px;
     font-weight: 900;
 }
 
-#w-text-c {
+#w_text_c {
     width: 94vw;
     max-width: 1920px;
     height: clamp(1px, 12vw, 53px);
@@ -143,14 +146,14 @@
     border-radius: 19px;
     align-items: center;
     box-shadow: 2.5px 2.5px 2.5px 2.5px rgba(20, 20, 20, 0.8);
-    backdrop-filter: blur(5px);
+    backface-visibility: hidden;
     background-color: rgba(0, 0, 0, 0.5);
     overflow: hidden;
     position: relative;
     top: clamp(1px, 3vw, 14px);
 }
 
-#display-show {
+#display_show {
     height: clamp(1px, 440px, 91vw);
     background-size: cover;
     background-position: bottom;
@@ -162,13 +165,13 @@
     transition: background-image 0.3s;
 }
 
-#home-center-text {
+#home_center_text {
     display: flex;
     width: auto;
     justify-content: center;
 }
 
-#display-show-c {
+#display_show_c {
     height: 80%;
     position: absolute;
     bottom: 0px;
@@ -177,7 +180,7 @@
     display: flex;
 }
 
-#mode-shifter-cont {
+#mode_shifter_cont {
     height: 50%;
     width: clamp(1px, 24vw, 110px);
     position: relative;
@@ -188,11 +191,11 @@
     gap: 6%;
 }
 
-#mode-shifter-cont div {
+#mode_shifter_cont div {
     background-color: var(--nav-modeball);
 }
 
-#mode-switch {
+#mode_switch {
     height: 71%;
     width: 40%;
     border: 0.5px solid rgb(220, 220, 220);
@@ -203,7 +206,7 @@
     cursor: pointer;
 }
 
-#mode-switch div {
+#mode_switch div {
     height: 89%;
     width: 46%;
     background-color: white;
@@ -213,17 +216,16 @@
     left: var(--nav-left-pos);
 }
 
-#tcb-hold {
+#tcb_hold {
     width: 92%;
     height: 47.5%;
     max-width: 1200px;
     box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(5px);
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: clamp(1px, 25px, 3vw);
 }
 
-#top-cont-board {
+#top_cont_board {
     border-radius: clamp(1px, 25px, 3vw);
     width: 88%;
     float: right;
@@ -233,7 +235,7 @@
     height: 73%;
 }
 
-#tcb-leftbox {
+#tcb_leftbox {
     position: relative;
     border: 1px solid lime;
     border-radius: clamp(1px, 25px, 3vw);
@@ -242,18 +244,18 @@
     transition: 0.3s;
 }
 
-#tcb-contentbox {
+#tcb_contentbox {
     height: 100%;
     width: 70%;
 }
 
-#home-recent {
+#home_recent {
     height: 45.5%;
     width: 92%;
     border: 1px solid lime;
 }
 
-#home-content-box {
+#home_content_box {
     height: 140%;
     width: 100%;
     position: relative;
@@ -264,48 +266,48 @@
     column-gap: 30px;
 }
 
-#text-place img {
+#text_place img {
     height: 60%;
     display: inline-block;
 }
 
-#text-place p {
+#text_place p {
     display: inline-block;
     margin: auto;
     top: 5%;
     transform: translateY(-5%);
 }
 
-#mode-shift-image {
+#mode_shift_image {
     height: 130%;
     width: auto;
 }
 
-#nav-app-logo {
+#nav_app_logo {
     height: 100%;
     width: auto;
 }
 
-#home-in2 {
+#home_in2 {
     display: none;
     height: 28%;
     width: 100%;
 }
 
-#home-in1 {
+#home_in1 {
     height: 25%;
     display: block;
     top: 74.5%;
     position: relative;
 }
 
-#home-icon {
+#home_icon {
     position: relative;
     top: 6%;
 }
 
-#home-in1 input,
-#home-in2 input {
+#home_in1 input,
+#home_in2 input {
     height: 65%;
     width: 65.9%;
     border: clamp(1px, 2px, 0.1vw) solid #344052;
@@ -320,19 +322,19 @@
     color: var(--font-color);
 }
 
-#home-in2 {
+#home_in2 {
     position: relative;
     bottom: 13%;
 }
 
-#home-in1 input {
+#home_in1 input {
     margin-left: 3.7%;
 }
 
-#home-in1 input:focus ~ span,
-#home-in2 input:focus ~ span,
-#home-in1 input:valid ~ span,
-#home-in2 input:valid ~ span {
+#home_in1 input:focus ~ span,
+#home_in2 input:focus ~ span,
+#home_in1 input:valid ~ span,
+#home_in2 input:valid ~ span {
     transform: translateY(-150%);
     background: linear-gradient(to right, rgb(83, 126, 244) 3.8%, rgb(158, 70, 206));
     border-radius: 2px;
@@ -340,15 +342,15 @@
     color: black;
 }
 
-#home-in1 input:focus,
-#home-in2 input:focus,
-#home-in1 input:valid,
-#home-in2 input:valid {
+#home_in1 input:focus,
+#home_in2 input:focus,
+#home_in1 input:valid,
+#home_in2 input:valid {
     border-color: rgb(158, 70, 206);
 }
 
-#home-in1 span,
-#home-in2 span {
+#home_in1 span,
+#home_in2 span {
     position: absolute;
     font-family: "Play", sans-serif;
     color: #344052;
@@ -360,8 +362,8 @@
     user-select: none;
 }
 
-#home-in1 div,
-#home-in2 div {
+#home_in1 div,
+#home_in2 div {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -370,7 +372,7 @@
     flex-wrap: nowrap;
 }
 
-#bash-icon-logo {
+#bash_icon_logo {
     height: 43%;
     width: 19.2%;
     pointer-events: none;
@@ -378,7 +380,7 @@
     color: var(--font-color);
 }
 
-#send-input {
+#send_input {
     height: 68%;
     width: 13.7%;
     background: linear-gradient(to right, rgb(83, 126, 244) 3.8%, rgb(158, 70, 206));
@@ -389,13 +391,13 @@
     cursor: pointer;
 }
 
-#send-input-icon {
+#send_input_icon {
     height: 100%;
     width: 100%;
     color: white;
 }
 
-#hd-title {
+#hd_title {
     font-size: clamp(1px, 32px, 5.2vw);
     font-family: "rubik", sans-serif;
     margin: 0;
@@ -404,23 +406,19 @@
     letter-spacing: 1.7px;
 }
 
-#hd-smalltext {
+#hd_smalltext {
     margin: 0;
     color: #555c64;
     font-size: clamp(1px, 16px, 4vw);
 }
 
-#home-desc {
+#home_desc {
     margin: 0;
     font-size: clamp(1px, 14px, 3.5vw);
 }
 
 .barrelClass {
     animation: barrelroll 2s linear;
-}
-
-* {
-    transition: color 80ms;
 }
 
 @keyframes barrelroll {
@@ -456,97 +454,102 @@
     }
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    background-color: var(--webcolor);
-    scroll-behavior: smooth;
-
-    --home-image: url(../image/black_banner.png);
-    --cboard-color: #0c0b16;
-    --nav-left-pos: 2%;
-    --font-color: white;
-    --nav-modeball: rgba(164, 4, 236, 0.82);
-    --home-bng: linear-gradient(#18141c, #18141c);
-    --webcolor: #121a26;
-    --input-back: #121212;
-
-    --nav-shadow: 0.04em 0.04em 0 rgba(10, 10, 10, 1), 0.11em 0.11em 0 rgba(10, 10, 10, 1);
-    --nav-bng: linear-gradient(39deg, rgb(29, 7, 64) 8.5%, rgb(253, 105, 139) 94.2%, black 1%);
-}
-
-body.light {
-    --home-shade: 0 0 15px darkgreen;
-    --font-color: black;
-    --home-image: url(../image/white_banner.png);
-    --nav-left-pos: 56%;
-    --cboard-color: white;
-    --nav-modeball: #4289f5;
-    --webcolor: #eeeeee;
-    --input-back: #eef5ff;
-
-    --nav-bng: linear-gradient(39deg, #3232f5, #41b7fb, #85d2ff 94.2%, blue 1%);
-    --nav-shadow: 0.02em 0.02em 0 rgba(100, 100, 255, 0.5), 0.05em 0.05em 0 rgba(70, 70, 70, 1);
-}
-
-@media print {
-    * {
-        color: black;
-        box-shadow: none !important;
-        border-color: black;
-    }
-
-    #mode-switch div,
-    #top-cont-board,
-    #sticky-bar,
-    #tcb-hold,
-    #mode-switch {
-        border: 1px solid black;
-    }
-}
-
 @media only screen and (min-width: 850px) {
-    #home-in1 {
+    #home_in1 {
         display: none;
     }
 
-    #home-details {
+    #home_details {
         height: 70%;
         padding-top: 1.2%;
     }
 
-    #home-in2 {
+    #home_in2 {
         display: block;
         position: relative;
     }
 
-    #home-content-box {
+    #home_content_box {
         height: 67%;
     }
 
-    #home-recent {
+    #home_recent {
         height: 101%;
         width: 29%;
         max-width: 610px;
     }
 
-    #tcb-hold {
+    #tcb_hold {
         height: 101%;
         width: 57%;
     }
 
-    #top-cont-board {
+    #top_cont-board {
         height: 100%;
     }
 
-    #home-in1 input,
-    #home-in2 input {
+    #home_in1 input,
+    #home_in2 input {
+        padding-left: 12.5%;
+    }
+
+    #home_in1 span,
+    #home_in2 span {
+        margin-left: clamp(15%, 5vw, 90px);
+    }
+}
+
+@media print {
+    #mode_switch div,
+    #top_cont-board,
+    #sticky_bar,
+    #tcb_hold,
+    #mode_switch {
+        border: 1px solid black;
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    #home_in1 {
+        display: none;
+    }
+
+    #home_details {
+        height: 70%;
+        padding-top: 1.2%;
+    }
+
+    #home_in2 {
+        display: block;
+        position: relative;
+    }
+
+    #home_content_box {
+        height: 67%;
+    }
+
+    #home_recent {
+        height: 101%;
+        width: 29%;
+        max-width: 610px;
+    }
+
+    #tcb_hold {
+        height: 101%;
+        width: 57%;
+    }
+
+    #top_cont_board {
+        height: 100%;
+    }
+
+    #home_in1 input,
+    #home_in2 input {
         padding-left: 12.5%;
     }
 
     #home-in1 span,
-    #home-in2 span {
+    #home_in2 span {
         margin-left: clamp(15%, 5vw, 90px);
     }
 }

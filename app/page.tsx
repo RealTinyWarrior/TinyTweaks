@@ -2,8 +2,8 @@ import HomeLeftBoard from "@components/HomeLeftBoard";
 import StickyBar from "@components/Stickybar";
 import Navbar from "@components/Navbar";
 import HomeInput from "@components/HomeInput";
-import "@styles/header.css";
 import dynamic from "next/dynamic";
+import style from "@styles/header.module.css";
 
 const DisplayShow = dynamic(() => import("@components/DisplayShow"), { ssr: false });
 
@@ -13,9 +13,9 @@ const Home = () => {
             <Navbar place="home" />
             <StickyBar place="home" />
 
-            <div id="display-show">
-                <div id="home-center-text">
-                    <div id="w-text-c">
+            <div id={style.display_show}>
+                <div id={style.home_center_text}>
+                    <div id={style.w_text_c}>
                         <p>
                             &nbsp;
                             <DisplayShow />
@@ -24,17 +24,17 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div id="home-content-box">
-                    <div id="tcb-hold">
-                        <div id="top-cont-board">
+                <div id={style.home_content_box}>
+                    <div id={style.tcb_hold}>
+                        <div id={style.top_cont_board}>
                             <HomeLeftBoard />
 
-                            <div id="tcb-contentbox">
-                                <div id="home-details">
-                                    <p id="hd-smalltext">TinyTweaks</p>
-                                    <p id="hd-title">HI, I'M TINY!</p>
+                            <div id={style.tcb_contentbox}>
+                                <div id={style.home_details}>
+                                    <p id={style.hd_smalltext}>TinyTweaks</p>
+                                    <p id={style.hd_title}>HI, I'M TINY!</p>
 
-                                    <p id="home-desc">
+                                    <p id={style.home_desc}>
                                         Welcome to TinyTweaks! I'm TinyWarrior, a person who heavily enjoys
                                         programming. I made this website to share my projects online!
                                     </p>
@@ -47,7 +47,7 @@ const Home = () => {
                         <HomeInput ui={"small"} />
                     </div>
 
-                    <div id="home-recent"></div>
+                    <div id={style.home_recent}></div>
                 </div>
             </div>
         </>

@@ -1,0 +1,37 @@
+* {
+    transition: color 80ms;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: var(--webcolor);
+    scroll-behavior: smooth;
+
+    --home-image: url(../image/dark_banner.png);
+    --cboard-color: #0c0b16;
+    --nav-left-pos: 2%;
+    --font-color: white;
+    --nav-modeball: rgba(164, 4, 236, 0.82);
+    --home-bng: linear-gradient(#18141c, #18141c);
+    --webcolor: #121a26;
+    --input-back: #121212;
+
+    --nav-shadow: 0.04em 0.04em 0 rgba(10, 10, 10, 1), 0.11em 0.11em 0 rgba(10, 10, 10, 1);
+    --nav-bng: linear-gradient(39deg, rgb(29, 7, 64) 8.5%, rgb(253, 105, 139) 94.2%, black 1%);
+}
+
+body.light {
+    --home-image: url(../image/light_banner.jpg);
+    --home-shade: 0 0 15px darkgreen;
+    --font-color: black;
+    --nav-left-pos: 56%;
+    --cboard-color: white;
+    --nav-modeball: #4289f5;
+    --webcolor: #eeeeee;
+    --input-back: #eef5ff;
+
+    --nav-bng: linear-gradient(39deg, #3232f5, #41b7fb, #85d2ff 94.2%, blue 1%);
+    --nav-shadow: 0.02em 0.02em 0 rgba(100, 100, 255, 0.5), 0.05em 0.05em 0 rgba(70, 70, 70, 1);
+}

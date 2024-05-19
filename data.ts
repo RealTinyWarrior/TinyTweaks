@@ -11,7 +11,9 @@ type LangType = {
     go: string;
 }[];
 
-export const command: string[] = ["`barrelroll`", "`visicord`"];
+export const command: string[] = ["barrelroll", "visicord"];
+export const customCommands: string[] = ['barrelroll'];
+export const locations: string[] = ["none", 'https://visicord.vercel.app/'];
 
 export const langLinks: LangType = [
     {
@@ -47,7 +49,7 @@ export const textArray: string[] = [
     "Welcome Here!:)",
     "Welcome to my website!",
     "o_O",
-    "Do people even read this?",
+    "Do people even read these?",
     "Aha! A Human! Hello :)",
     "Look, I'm glowing!",
     "Nice to meet you :)",
