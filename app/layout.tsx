@@ -16,7 +16,7 @@ export const viewport: Viewport = {
 
 const RootLayout = ({ children }: { children: React.ReactElement }) => {
     return (
-        <html lang="en" className="dark">
+        <html lang="en">
             <LinkFonts />
             <body>{children}</body>
         </html>

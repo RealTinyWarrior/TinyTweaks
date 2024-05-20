@@ -417,20 +417,6 @@
     font-size: clamp(1px, 14px, 3.5vw);
 }
 
-.barrelClass {
-    animation: barrelroll 2s linear;
-}
-
-@keyframes barrelroll {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
 @keyframes visual {
     0% {
         opacity: 1;
