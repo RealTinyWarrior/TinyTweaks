@@ -5,6 +5,9 @@ import { SiGnubash } from "react-icons/si";
 import { TbCubeSend } from "react-icons/tb";
 import { command, locations, customCommands } from "@data";
 import style from "@styles/header.module.css";
+import dynamic from "next/dynamic";
+
+const TextComponent = dynamic(() => import("@components/HomeInputText.tsx"), { ssr: false });
 
 const HomeInput = ({ ui }: { ui: "small" | "large" }) => {
     const [value, setValue] = useState("");
@@ -26,7 +29,7 @@ const HomeInput = ({ ui }: { ui: "small" | "large" }) => {
                     required
                 />
 
-                <span suppressHydrationWarning>&nbsp;&nbsp;Type {initialCmd}&nbsp;&nbsp;</span>
+                <TextComponent text={initialCmd} />
                 <SiGnubash id={style.bash_icon_logo} />
 
                 <section

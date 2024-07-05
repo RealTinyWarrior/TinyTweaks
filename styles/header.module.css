@@ -140,7 +140,7 @@
 
 #w_text_c {
     width: 94vw;
-    max-width: 1920px;
+    max-width: 1640px;
     height: clamp(1px, 12vw, 53px);
     display: flex;
     border-radius: 19px;
@@ -219,7 +219,7 @@
 #tcb_hold {
     width: 92%;
     height: 47.5%;
-    max-width: 1200px;
+    max-width: 980px;
     box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.6);
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: clamp(1px, 25px, 3vw);
@@ -237,11 +237,29 @@
 
 #tcb_leftbox {
     position: relative;
-    border: 1px solid lime;
     border-radius: clamp(1px, 25px, 3vw);
     right: clamp(1px, 9%, 90px);
     height: 60%;
     transition: 0.3s;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 3px solid rgb(140, 141, 226);
+    overflow: hidden;
+    text-shadow: 1.5px 1.5px black;
+}
+
+#tcb_status {
+    position: absolute;
+    bottom: -4.3px;
+    right: 0;
+    margin: 7%;
+}
+
+#tcb_statustext {
+    position: absolute;
+    margin-left: 7%;
+    font-family: "VT323", sans-serif;
 }
 
 #tcb_contentbox {
@@ -252,7 +270,33 @@
 #home_recent {
     height: 45.5%;
     width: 92%;
+    border-radius: clamp(1px, 25px, 3vw);
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.6);
     border: 1px solid lime;
+    border-radius: clamp(1px, 25px, 3vw);
+}
+
+#recent_icon_cont {
+    display: flex;
+    align-items: center;
+    height: 40%;
+    width: auto;
+    margin: 12px;
+}
+
+.image_fill {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+#recent_icon {
+    height: 100%;
+    width: 20%;
+    border: 1px solid lime;
+    transition: 0.3s;
+    border-radius: clamp(1px, 15px, 1.5vw);
 }
 
 #home_content_box {

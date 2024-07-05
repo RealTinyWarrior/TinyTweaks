@@ -1,9 +1,10 @@
 import HomeLeftBoard from "@components/HomeLeftBoard";
 import StickyBar from "@components/Stickybar";
 import Navbar from "@components/Navbar";
-import HomeInput from "@components/HomeInput";
 import dynamic from "next/dynamic";
 import style from "@styles/header.module.css";
+import HomeRecent from "@components/HomeRecent";
+import HomeInput from "@components/HomeInput";
 
 const DisplayShow = dynamic(() => import("@components/DisplayShow"), { ssr: false });
 
@@ -47,7 +48,7 @@ const Home = () => {
                         <HomeInput ui={"small"} />
                     </div>
 
-                    <div id={style.home_recent}></div>
+                    <HomeRecent />
                 </div>
             </div>
         </>

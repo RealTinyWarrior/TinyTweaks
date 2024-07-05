@@ -95,3 +95,12 @@ export const emojies: string[] = [
     "T_T",
     ";-;",
 ];
+
+export const recent = [
+    {
+        name: "Visicord",
+        date: "Nov 5, 2023",
+        link: "https://visicord.vercel.app",
+        description: "Try out some Discord APIs without having to write a single line of code!",
+    }
+]
