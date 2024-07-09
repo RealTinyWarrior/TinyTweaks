@@ -1,7 +1,3 @@
-* {
-    transition: color 80ms;
-}
-
 @keyframes barrelroll {
     from {
         transform: rotate(0deg);

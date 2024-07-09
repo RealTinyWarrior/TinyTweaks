@@ -102,5 +102,12 @@ export const recent = [
         date: "Nov 5, 2023",
         link: "https://visicord.vercel.app",
         description: "Try out some Discord APIs without having to write a single line of code!",
-    }
+    },
+
+    {
+        name: "Calculator",
+        date: "March 1, 2021",
+        link: "https://calc-tinytweaks.vercel.app/",
+        description: "One of my first React projects ever, a simple Calculator."
+    },
 ]
