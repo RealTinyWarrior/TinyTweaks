@@ -1,4 +1,9 @@
 import { CSSProperties } from "react";
+import { StaticImageData } from "next/image";
+import visicord_icon from '@image/recent/visicord_icon.svg'
+import visicord_back from '@image/recent/visicord_background.jpg'
+import calc_tinytweaks from '@image/recent/calc_tinytweaks.svg'
+import calc_background from '@image/recent/calc_background.webp'
 
 export const pointerOfNav: CSSProperties = {
     background: "linear-gradient(orange, red)",
@@ -10,6 +15,18 @@ type LangType = {
     text: string;
     go: string;
 }[];
+
+type Recent = {
+    name: string;
+    date: string;
+    icon: StaticImageData;
+    link: string;
+    description: string;
+    background: StaticImageData;
+    border: string;
+    iconBorder: string;
+    buttonColor: string;
+}[]
 
 export const command: string[] = ["barrelroll", "visicord"];
 export const customCommands: string[] = ['barrelroll'];
@@ -96,18 +113,28 @@ export const emojies: string[] = [
     ";-;",
 ];
 
-export const recent = [
+export const recent: Recent = [
     {
         name: "Visicord",
         date: "Nov 5, 2023",
+        icon: visicord_icon,
+        border: "#292929",
+        iconBorder: "#949494",
+        buttonColor: "rgba(41,41,41,0.7)",
+        background: visicord_back,
         link: "https://visicord.vercel.app",
-        description: "Try out some Discord APIs without having to write a single line of code!",
+        description: "Try out some Discord APIs without having to write a single line of code or having to join a server!",
     },
 
     {
         name: "Calculator",
         date: "March 1, 2021",
+        icon: calc_tinytweaks,
+        border: "#8c52ff",
+        iconBorder: "white",
+        background: calc_background,
+        buttonColor: "rgba(119, 51, 255,0.7)",
         link: "https://calc-tinytweaks.vercel.app/",
-        description: "One of my first React projects ever, a simple Calculator."
+        description: "One of my first React projects ever, a simple Calculator, doesn't have that many functionalities but it does the job."
     },
 ]

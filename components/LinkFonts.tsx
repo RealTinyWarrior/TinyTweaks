@@ -5,6 +5,7 @@ const LinkFonts = () => {
         <head>
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
             <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet" />
             <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
             <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet" />
@@ -22,7 +23,6 @@ const LinkFonts = () => {
                 rel="stylesheet"
             />
             <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet"></link>
-            <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link
                 href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap"
                 rel="stylesheet"

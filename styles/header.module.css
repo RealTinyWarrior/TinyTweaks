@@ -222,11 +222,11 @@
     max-width: 980px;
     box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.6);
     background-color: rgba(0, 0, 0, 0.5);
-    border-radius: clamp(1px, 25px, 3vw);
+    border-radius: clamp(1px, 15px, 3vw);
 }
 
 #top_cont_board {
-    border-radius: clamp(1px, 25px, 3vw);
+    border-radius: clamp(1px, 15px, 3vw);
     width: 88%;
     float: right;
     align-items: center;
@@ -237,7 +237,7 @@
 
 #tcb_leftbox {
     position: relative;
-    border-radius: clamp(1px, 25px, 3vw);
+    border-radius: clamp(1px, 15px, 3vw);
     right: clamp(1px, 9%, 90px);
     height: 60%;
     transition: 0.3s;
@@ -269,12 +269,21 @@
 }
 
 #home_recent {
-    height: 45.5%;
+    height: 47.5%;
     width: 92%;
-    border-radius: clamp(1px, 25px, 3vw);
+    border-radius: clamp(1px, 15px, 3vw);
     box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.6);
-    border: 1px solid lime;
-    border-radius: clamp(1px, 25px, 3vw);
+    transition: border 800ms;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.recent_link {
+    position: relative;
+    bottom: 100%;
+    height: 100%;
+    width: 100%;
 }
 
 .recent_data {
@@ -284,20 +293,45 @@
     position: relative;
 }
 
+.background_image_recent {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
 .recent_data_name {
     font-size: clamp(1px, 38px, 8vw);
     font-family: "Kode Mono", monospace;
     font-weight: bolder;
     text-wrap: nowrap;
+    text-shadow: 0.04em 0.04em 0 rgba(22, 22, 22, 0.75), 0.11em 0.11em 0 rgba(22, 22, 22, 0.75);
 }
 
 .recent_description {
     height: 50%;
-    line-height: 21px;
+    line-height: clamp(1px, 23px, 4.1vw);
     margin: 3%;
     display: flex;
-    font-family: "Play", sans-serif;
-    font-size: 18px;
+    font-family: "Righteous", sans-serif;
+    font-size: clamp(1px, 18px, 3.8vw);
+}
+
+.recent_icon_cont_img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    transition: 200ms;
+}
+
+.recent_icon_cont_img:hover {
+    height: 110%;
+    width: 110%;
+}
+
+.fit_image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
 .recent_description p {
@@ -308,14 +342,16 @@
     font-family: "Play", sans-serif;
     margin-top: 11%;
     margin-left: 1%;
+    text-shadow: 1.5px 1.5px rgb(22, 22, 22, 0.75);
+    font-size: clamp(1px, 16px, 3.2vw);
 }
 
 .recent_icon_cont {
     display: flex;
     align-items: center;
-    height: 40%;
+    height: 39%;
     width: 100%;
-    margin: 12px;
+    margin: 2.7%;
 }
 
 .image_fill {
@@ -325,12 +361,22 @@
     position: absolute;
 }
 
-#recent_icon {
+.image_container {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.recent_icon {
     height: 100%;
-    width: 20%;
-    border: 1px solid lime;
     transition: 0.3s;
-    border-radius: clamp(1px, 15px, 1.5vw);
+    border-radius: clamp(1px, 10px, 2vw);
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #home_content_box {

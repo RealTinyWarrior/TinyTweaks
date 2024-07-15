@@ -29,9 +29,12 @@ const HomeInput = ({ ui }: { ui: "small" | "large" }) => {
                     required
                 />
 
-                <TextComponent text={initialCmd} />
-                <SiGnubash id={style.bash_icon_logo} />
+                <span>
+                    &nbsp;&nbsp;Type <TextComponent text={initialCmd} />
+                    &nbsp;&nbsp;
+                </span>
 
+                <SiGnubash id={style.bash_icon_logo} />
                 <section
                     id={style.send_input}
                     title="Send input"
