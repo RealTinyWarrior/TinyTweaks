@@ -26,7 +26,6 @@ type Recent = {
     border: string;
     iconBorder: string;
     buttonColor: string;
-    lazyloading: string;
 }[]
 
 export const command: string[] = ["barrelroll", "visicord"];
@@ -122,7 +121,6 @@ export const recent: Recent = [
         border: "#292929",
         iconBorder: "#949494",
         buttonColor: "rgba(41,41,41,0.7)",
-        lazyloading: "black",
         background: visicord_back,
         link: "https://visicord.vercel.app",
         description: "Try out some Discord APIs without having to write a single line of code or having to join a server!",
@@ -130,12 +128,11 @@ export const recent: Recent = [
 
     {
         name: "Calculator",
-        date: "August 27, 2022",
+        date: "March 1, 2021",
         icon: calc_tinytweaks,
         border: "#8c52ff",
         iconBorder: "white",
         background: calc_background,
-        lazyloading: "#051a2e",
         buttonColor: "rgba(119, 51, 255,0.7)",
         link: "https://calc-tinytweaks.vercel.app/",
         description: "One of my first React projects ever, a simple Calculator, doesn't have that many functionalities but it does the job."

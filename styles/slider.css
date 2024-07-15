@@ -1,6 +1,9 @@
 #home_slides {
     height: 100%;
     display: flex;
+
+    /* Change according to the recent application. #lazyload */
+    background-color: black;
 }
 
 #recent_0,

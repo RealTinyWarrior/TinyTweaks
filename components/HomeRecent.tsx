@@ -67,10 +67,7 @@ const HomeRecent = () => {
                     <div className="slides_inner">
                         {recent.map((elm) => (
                             <div className="recent_slide" key={elm.name}>
-                                <div
-                                    className={style.background_image_recent}
-                                    style={{ backgroundColor: elm.lazyloading }}
-                                >
+                                <div className={style.background_image_recent}>
                                     <Image className={style.fit_image} src={elm.background} alt={elm.name} />
                                 </div>
 
