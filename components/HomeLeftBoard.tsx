@@ -53,8 +53,19 @@ const HomeLeftBoard = () => {
 
     return (
         <div id={style.tcb_leftbox} ref={boxRef} style={{ width: boxState }}>
-            <Image className={style.image_fill} alt="Clouds" src={cloud_banner} />
-            <Image className={style.image_fill} alt="TinyWarrior Logo" src={base_logo} />
+            <Image
+                style={{ userSelect: "none" }}
+                className={style.image_fill}
+                src={cloud_banner}
+                alt="Clouds"
+            />
+
+            <Image
+                style={{ userSelect: "none" }}
+                className={style.image_fill}
+                alt="TinyWarrior Logo"
+                src={base_logo}
+            />
 
             <p
                 id={style.tcb_statustext}

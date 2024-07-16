@@ -68,7 +68,12 @@ const HomeRecent = () => {
                         {recent.map((elm) => (
                             <div className="recent_slide" key={elm.name}>
                                 <div className={style.background_image_recent}>
-                                    <Image className={style.fit_image} src={elm.background} alt={elm.name} />
+                                    <Image
+                                        style={{ userSelect: "none" }}
+                                        className={style.fit_image}
+                                        src={elm.background}
+                                        alt={elm.name}
+                                    />
                                 </div>
 
                                 <div className={style.recent_link}>
@@ -85,6 +90,7 @@ const HomeRecent = () => {
                                             >
                                                 <Image
                                                     className={style.recent_icon_cont_img}
+                                                    style={{ userSelect: "none" }}
                                                     src={elm.icon}
                                                     alt={elm.name}
                                                 />
