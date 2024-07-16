@@ -79,7 +79,7 @@ const HomeLeftBoard = () => {
                 }}
             >
                 {status == "code" ? "Coding in" : status != "game" ? "" : "Playing"}
-                <br />
+                <br style={{ userSelect: "none" }} />
                 {statusText == "Dnd" ? "Do Not Disturb" : statusText == "BlueStacks 5" ? details : statusText}
             </p>
 
