@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import style from "@styles/header.module.css";
 import DiscordStatus from "./DiscordStatus";
 import Image from "next/image";
-import cloud_banner from "@image/cloud_banner.webp";
-import base_logo from "@image/tw_base.png";
+import cloud_banner from "@images/cloud_banner.webp";
+import base_logo from "@images/tw_base.png";
 
 type StatusData = {
     activities: { name: string; details: string }[];
@@ -79,11 +79,13 @@ const HomeLeftBoard = () => {
                 }}
             >
                 {status == "code" ? "Coding in" : status != "game" ? "" : "Playing"}
-                <br style={{ userSelect: "none" }} />
+                <br className="select-none" />
                 {statusText == "Dnd" ? "Do Not Disturb" : statusText == "BlueStacks 5" ? details : statusText}
             </p>
 
-            <DiscordStatus status={status} />
+            <div id={style.tcb_status}>
+                <DiscordStatus status={status} />
+            </div>
         </div>
     );
 };

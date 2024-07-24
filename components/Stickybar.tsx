@@ -2,7 +2,7 @@ import { CgFileDocument } from "react-icons/cg";
 import { HiCode } from "react-icons/hi";
 import { TbAppsOff } from "react-icons/tb";
 import ModeSwitch from "./ModeSwitch.tsx";
-import lightdark from "@image/lightdark.svg";
+import lightdark from "@images/lightdark.svg";
 import Image from "next/image";
 import React from "react";
 import style from "@styles/header.module.css";
@@ -22,9 +22,14 @@ const StickyBar = ({ place }: Props) => {
     return (
         <div id={style.sticky_bar}>
             <div id={style.text_place}>
-                &nbsp;
+                <span className="select-none">&nbsp;</span>
                 <Icon place={place} />
-                <p> &nbsp;{place[0].toUpperCase() + place.slice(1)}</p>
+
+                <p>
+                    {" "}
+                    <span className="select-none">&nbsp;</span>
+                    {place[0].toUpperCase() + place.slice(1)}
+                </p>
             </div>
 
             <div id={style.mode_shifter_cont}>
@@ -34,6 +39,7 @@ const StickyBar = ({ place }: Props) => {
                     priority
                     alt="sun logo"
                     draggable="false"
+                    className="select-none"
                     id={style.mode_shift_image}
                     src={lightdark}
                 />

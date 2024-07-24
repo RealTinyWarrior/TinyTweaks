@@ -102,7 +102,7 @@
     position: sticky;
     top: 0;
     box-shadow: 0px 0px 8px 2px rgb(20, 20, 20);
-    z-index: 1;
+    z-index: 3;
 }
 
 #text_place {
@@ -121,7 +121,6 @@
     left: clamp(1px, 5px, 0.5vw);
     font-size: clamp(1px, 6vw, 25px);
     font-family: "VT323", sans-serif;
-    text-shadow: var(--home-shade);
 }
 
 #w_text_c > p > span {
@@ -152,6 +151,7 @@
     background-position: bottom;
     width: 100%;
     background-image: var(--home-image);
+    background-color: var(--home-lazyload);
     position: relative;
     bottom: clamp(1px, 15vw, 58px);
     padding-top: clamp(1px, 15vw, 58px);
@@ -205,7 +205,7 @@
     background-color: white;
     border-radius: 50px;
     position: relative;
-    transition: 0.16s;
+    transition: left 0.16s;
     left: var(--nav-left-pos);
 }
 
@@ -233,7 +233,7 @@
     border-radius: clamp(1px, 15px, 3vw);
     right: clamp(1px, 9%, 90px);
     height: 60%;
-    transition: 0.3s;
+    transition: width 0.3s;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -314,7 +314,7 @@
     object-fit: cover;
     height: 100%;
     width: 100%;
-    transition: 200ms;
+    transition: height 200ms, width 200ms;
 }
 
 .recent_icon_cont_img:hover {

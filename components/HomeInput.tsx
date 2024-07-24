@@ -55,10 +55,10 @@ function inputEffect(value: string, getRandomCmd: () => void, setValue: (val: st
         if (value == "barrelroll") {
             const element = document.querySelector("body");
 
-            element?.classList.add("barrelClass");
+            element?.classList.add("barrelroll");
 
             setTimeout(() => {
-                element?.classList.remove("barrelClass");
+                element?.classList.remove("barrelroll");
             }, 2100);
 
             getRandomCmd();

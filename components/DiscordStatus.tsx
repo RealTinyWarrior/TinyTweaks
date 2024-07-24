@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import style from "@styles/header.module.css";
 import { FaCircle } from "react-icons/fa";
 import { PiMoonStarsDuotone } from "react-icons/pi";
 import { SiVisualstudiocode } from "react-icons/si";
@@ -11,7 +10,7 @@ import { FaCircleDot } from "react-icons/fa6";
 
 const DiscordStatus = ({ status }: { status: string }) => {
     return (
-        <div id={style.tcb_status}>
+        <>
             {status == "online" ? (
                 <FaCircle color="#23a55a" />
             ) : status == "idle" ? (
@@ -27,7 +26,7 @@ const DiscordStatus = ({ status }: { status: string }) => {
             ) : (
                 ""
             )}
-        </div>
+        </>
     );
 };
 

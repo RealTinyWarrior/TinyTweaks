@@ -1,6 +1,6 @@
 import LinkFonts from "@components/LinkFonts";
 import { Metadata, Viewport } from "next";
-import "@styles/globals.css";
+import "@styles/app.css";
 
 export const metadata: Metadata = {
     title: "Home - TinyTweaks",

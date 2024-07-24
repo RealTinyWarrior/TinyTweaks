@@ -3,7 +3,7 @@
 import style from "@styles/header.module.css";
 import React, { useState } from "react";
 import { recent } from "@data";
-import "@styles/slider.css";
+import "@styles/apps_slider.css";
 import Image from "next/image";
 import { FaChevronRight } from "react-icons/fa";
 import { FaChevronLeft } from "react-icons/fa";

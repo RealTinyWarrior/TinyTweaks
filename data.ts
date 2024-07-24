@@ -1,9 +1,9 @@
 import { CSSProperties } from "react";
 import { StaticImageData } from "next/image";
-import visicord_icon from '@image/recent/visicord_icon.svg'
-import visicord_back from '@image/recent/visicord_background.jpg'
-import calc_tinytweaks from '@image/recent/calc_tinytweaks.svg'
-import calc_background from '@image/recent/calc_background.webp'
+import visicord_icon from '@images/recent/visicord_icon.svg'
+import visicord_back from '@images/recent/visicord_background.jpg'
+import calc_tinytweaks from '@images/recent/calc_tinytweaks.svg'
+import calc_background from '@images/recent/calc_background.webp'
 
 export const pointerOfNav: CSSProperties = {
     background: "linear-gradient(orange, red)",
@@ -128,7 +128,7 @@ export const recent: Recent = [
 
     {
         name: "Calculator",
-        date: "March 1, 2021",
+        date: "August 5, 2022",
         icon: calc_tinytweaks,
         border: "#8c52ff",
         iconBorder: "white",

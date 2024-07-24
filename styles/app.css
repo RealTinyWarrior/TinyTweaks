@@ -1,3 +1,14 @@
+.select-none {
+    user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.barrelroll {
+    animation: barrelroll 2s linear;
+}
+
 @keyframes barrelroll {
     from {
         transform: rotate(0deg);
@@ -8,10 +19,6 @@
     }
 }
 
-.barrelClass {
-    animation: barrelroll 2s linear;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -19,7 +26,8 @@ body {
     background-color: var(--webcolor);
     scroll-behavior: smooth;
 
-    --home-image: url(../image/dark_banner.png);
+    --home-lazyload: rgb(76, 1, 128);
+    --home-image: url(../images/dark_banner.png);
     --cboard-color: #0c0b16;
     --nav-left-pos: 2%;
     --font-color: white;
@@ -33,8 +41,8 @@ body {
 }
 
 body.light {
-    --home-image: url(../image/light_banner.jpg);
-    --home-shade: 0 0 15px darkgreen;
+    --home-lazyload: rgb(41, 112, 228);
+    --home-image: url(../images/light_banner.jpg);
     --font-color: black;
     --nav-left-pos: 56%;
     --cboard-color: white;

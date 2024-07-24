@@ -1,6 +1,6 @@
 import style from "@styles/header.module.css";
 import { pointerOfNav } from "@data";
-import banner from "@image/nav_banner.png";
+import banner from "@images/nav_banner.png";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
@@ -25,6 +25,7 @@ const Navbar = ({ place }: Props) => {
                         {["home", "blogs", "apps"].map((elm) => (
                             <Link
                                 key={elm}
+                                className="select-none"
                                 href={`/${elm === "home" ? "/" : elm}`}
                                 style={elm === place ? pointerOfNav : {}}
                             >
