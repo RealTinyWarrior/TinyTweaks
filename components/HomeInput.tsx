@@ -4,7 +4,7 @@ import { useState } from "react";
 import { SiGnubash } from "react-icons/si";
 import { TbCubeSend } from "react-icons/tb";
 import { command, locations, customCommands } from "@data";
-import style from "@styles/header.module.css";
+import style from "@styles/home.module.css";
 import dynamic from "next/dynamic";
 
 const TextComponent = dynamic(() => import("@components/HomeInputText.tsx"), { ssr: false });

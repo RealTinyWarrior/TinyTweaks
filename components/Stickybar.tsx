@@ -5,7 +5,7 @@ import ModeSwitch from "./ModeSwitch.tsx";
 import lightdark from "@images/lightdark.svg";
 import Image from "next/image";
 import React from "react";
-import style from "@styles/header.module.css";
+import style from "@styles/home.module.css";
 
 type Props = { place: "home" | "blogs" | "apps" };
 
