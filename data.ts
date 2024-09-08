@@ -7,7 +7,7 @@ import calc_background from '@images/recent/calc_background.webp'
 
 export const pointerOfNav: CSSProperties = {
     background: "linear-gradient(orange, red)",
-    boxShadow: "0.5px 1px 4px 1.5px black",
+    boxShadow: "0 0 clamp(0.1px, 5px, 1vw) clamp(0.1px, 2px, 0.4vw) black",
 };
 
 type LangType = {

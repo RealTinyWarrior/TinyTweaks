@@ -29,23 +29,26 @@ const HomeLeftBoard = () => {
 
             const jsonData = await fetch("https://api.lanyard.rest/v1/users/906968333646168084");
             const { data }: { data: StatusData } = await jsonData.json();
+            let statusIndex = 0;
+
+            if (data.activities.length > 0) if (data.activities[0].name == "Custom Status") statusIndex = 1;
 
             setStatus(
-                data.activities.length > 0
-                    ? data.activities[0].name == "Visual Studio Code"
+                data.activities.length > statusIndex
+                    ? data.activities[statusIndex].name == "Visual Studio Code"
                         ? "code"
                         : "game"
                     : data.discord_status
             );
 
             setStatusText(
-                data.activities.length > 0
-                    ? data.activities[0].name
+                data.activities.length > statusIndex
+                    ? data.activities[statusIndex].name
                     : data.discord_status[0].toUpperCase() +
                           data.discord_status.slice(1, data.discord_status.length)
             );
 
-            setDetails(data.activities.length > 0 ? data.activities[0].details : "");
+            setDetails(data.activities.length > statusIndex ? data.activities[0].details : "");
         }
 
         getData();
@@ -58,6 +61,7 @@ const HomeLeftBoard = () => {
                 className={style.image_fill}
                 src={cloud_banner}
                 alt="Clouds"
+                unoptimized
             />
 
             <Image

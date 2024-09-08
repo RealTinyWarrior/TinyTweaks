@@ -71,8 +71,8 @@
     align-items: center;
     justify-content: space-between;
     width: clamp(10px, 58vw, 310px);
-    border-top: 0.5px solid;
-    border-bottom: 0.5px solid;
+    border-top: clamp(0.1vw, 0.5px, 0.1vw) solid;
+    border-bottom: clamp(0.1vw, 0.5px, 0.1vw) solid;
     border-radius: 3px;
     float: left;
     clear: left;
@@ -101,7 +101,7 @@
     font-family: "Teko", sans-serif;
     position: sticky;
     top: 0;
-    box-shadow: 0px 0px 8px 2px rgb(20, 20, 20);
+    box-shadow: 0 0 clamp(1px, 8px, 1.6vw) clamp(1px, 2px, 0.4vw) rgb(20, 20, 20);
     z-index: 3;
 }
 
@@ -137,7 +137,7 @@
     display: flex;
     border-radius: 19px;
     align-items: center;
-    box-shadow: 2.5px 2.5px 2.5px 2.5px rgba(20, 20, 20, 0.8);
+    box-shadow: 0 0 clamp(1px, 8px, 1.6vw) clamp(1px, 4px, 0.8vw) rgba(0, 0, 0, 0.8);
     backface-visibility: hidden;
     background-color: rgba(0, 0, 0, 0.5);
     overflow: hidden;
@@ -191,7 +191,7 @@
 #mode_switch {
     height: 71%;
     width: 40%;
-    border: 0.5px solid rgb(220, 220, 220);
+    border: 0.4px solid rgb(220, 220, 220);
     border-radius: 30px;
     display: flex;
     align-items: center;
@@ -213,7 +213,7 @@
     width: 92%;
     height: 47.5%;
     max-width: 980px;
-    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 clamp(1px, 4px, 0.8vw) clamp(1px, 4px, 0.8vw) rgba(0, 0, 0, 0.6);
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: clamp(1px, 15px, 3vw);
 }
@@ -237,9 +237,9 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    border: 3px solid rgb(140, 141, 226);
+    border: clamp(1px, 3px, 0.6vw) solid rgb(140, 141, 226);
     overflow: hidden;
-    text-shadow: 1.5px 1.5px black;
+    text-shadow: clamp(1px, 1.5px, 0.3vw) clamp(1px, 1.5px, 0.3vw) black;
     background-color: #c89cec;
 }
 
@@ -266,7 +266,7 @@
     height: 47.5%;
     width: 92%;
     border-radius: clamp(1px, 15px, 3vw);
-    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 clamp(1px, 4px, 0.8vw) clamp(1px, 4px, 0.8vw) rgba(0, 0, 0, 0.6);
     transition: border 800ms;
     overflow: hidden;
     box-sizing: border-box;
@@ -306,8 +306,9 @@
     line-height: clamp(1px, 23px, 4.1vw);
     margin: 3%;
     display: flex;
-    font-family: "Righteous", sans-serif;
     font-size: clamp(1px, 18px, 3.8vw);
+    font-family: "Play", sans-serif;
+    font-weight: 600;
 }
 
 .recent_icon_cont_img {
@@ -507,6 +508,9 @@
     border-bottom-right-radius: clamp(1px, 8px, 2vw);
     border: clamp(1px, 2px, 0.1vw) solid #344052;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #send_input_icon {
@@ -517,11 +521,11 @@
 
 #hd_title {
     font-size: clamp(1px, 32px, 5.2vw);
-    font-family: "rubik", sans-serif;
+    font-family: sans-serif;
     margin: 0;
     white-space: nowrap;
     font-weight: bold;
-    letter-spacing: 1.7px;
+    letter-spacing: clamp(1px, 1.7px, 0.35vw);
 }
 
 #hd_smalltext {

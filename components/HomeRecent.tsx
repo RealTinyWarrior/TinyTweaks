@@ -33,7 +33,10 @@ const HomeRecent = () => {
     }
 
     return (
-        <div id={style.home_recent} style={{ border: `3px solid ${recent[checked].border}` }}>
+        <div
+            id={style.home_recent}
+            style={{ border: `clamp(1px, 3px, 0.8vw) solid ${recent[checked].border}` }}
+        >
             {recent.map((elm, i) => (
                 <input
                     checked={checked == i ? true : false}
@@ -83,7 +86,7 @@ const HomeRecent = () => {
                                                 style={{
                                                     width: recentState,
                                                     minWidth: recentState,
-                                                    border: `3px solid ${elm.iconBorder}`,
+                                                    border: `clamp(1px, 3px, 0.8vw) solid ${elm.iconBorder}`,
                                                 }}
                                                 className={style.recent_icon}
                                                 ref={recentRef}

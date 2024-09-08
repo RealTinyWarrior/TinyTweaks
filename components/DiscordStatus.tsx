@@ -14,15 +14,15 @@ const DiscordStatus = ({ status }: { status: string }) => {
             {status == "online" ? (
                 <FaCircle color="#23a55a" />
             ) : status == "idle" ? (
-                <PiMoonStarsDuotone color="yellow" fontSize={23} />
+                <PiMoonStarsDuotone color="yellow" style={{ fontSize: "clamp(1px, 23px, 4.2vw)" }} />
             ) : status == "code" ? (
-                <SiVisualstudiocode color="#007ACC" fontSize={20} />
+                <SiVisualstudiocode color="#007ACC" style={{ fontSize: "clamp(1px, 20px, 4vw)" }} />
             ) : status == "game" ? (
-                <PiGameControllerDuotone color="#007ACC" fontSize={23} />
+                <PiGameControllerDuotone color="#007ACC" style={{ fontSize: "clamp(1px, 23px, 4.2vw)" }} />
             ) : status == "dnd" ? (
-                <FaMinusCircle color="#f23f43" fontSize={18} />
+                <FaMinusCircle color="#f23f43" style={{ fontSize: "clamp(1px, 18px, 4vw)" }} />
             ) : status == "offline" ? (
-                <FaCircleDot color="#80848e" fontSize={17} />
+                <FaCircleDot color="#80848e" style={{ fontSize: "clamp(1px, 17px, 4vw)" }} />
             ) : (
                 ""
             )}
