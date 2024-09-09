@@ -429,7 +429,7 @@
 #home_in2 input {
     height: 65%;
     width: 65.9%;
-    border: clamp(1px, 2px, 0.01vw) solid #344052;
+    border: 0.01px solid #344052;
     outline: none;
     border-top-left-radius: clamp(1px, 8px, 2vw);
     border-bottom-left-radius: clamp(1px, 8px, 2vw);
@@ -506,7 +506,7 @@
     margin-left: 1px;
     border-top-right-radius: clamp(1px, 8px, 2vw);
     border-bottom-right-radius: clamp(1px, 8px, 2vw);
-    border: clamp(1px, 2px, 0.01vw) solid #344052;
+    border: 0.01px solid #344052;
     cursor: pointer;
     display: flex;
     justify-content: center;
