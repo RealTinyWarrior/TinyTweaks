@@ -1,5 +1,5 @@
 "use client";
-import style from "@styles/home.module.css";
+import style from "@styles/header.module.css";
 
 const ModeSwitch = () => {
     return (

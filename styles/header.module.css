@@ -101,7 +101,7 @@
     font-family: "Teko", sans-serif;
     position: sticky;
     top: 0;
-    box-shadow: 0 0 clamp(1px, 8px, 1.6vw) clamp(1px, 2px, 0.4vw) rgb(20, 20, 20);
+    box-shadow: 0 0 clamp(1px, 8px, 0.7vw) clamp(1px, 2px, 0.4vw) rgb(20, 20, 20);
     z-index: 3;
 }
 
@@ -237,9 +237,9 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    border: clamp(1px, 3px, 0.6vw) solid rgb(140, 141, 226);
+    border: clamp(1px, 3px, 0.5vw) solid rgb(140, 141, 226);
     overflow: hidden;
-    text-shadow: clamp(1px, 1.5px, 0.3vw) clamp(1px, 1.5px, 0.3vw) black;
+    text-shadow: clamp(1px, 1.5px, 0.25vw) clamp(1px, 1.5px, 0.25vw) black;
     background-color: #c89cec;
 }
 
@@ -429,7 +429,7 @@
 #home_in2 input {
     height: 65%;
     width: 65.9%;
-    border: clamp(1px, 2px, 0.1vw) solid #344052;
+    border: clamp(1px, 2px, 0.01vw) solid #344052;
     outline: none;
     border-top-left-radius: clamp(1px, 8px, 2vw);
     border-bottom-left-radius: clamp(1px, 8px, 2vw);
@@ -506,7 +506,7 @@
     margin-left: 1px;
     border-top-right-radius: clamp(1px, 8px, 2vw);
     border-bottom-right-radius: clamp(1px, 8px, 2vw);
-    border: clamp(1px, 2px, 0.1vw) solid #344052;
+    border: clamp(1px, 2px, 0.01vw) solid #344052;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -525,7 +525,7 @@
     margin: 0;
     white-space: nowrap;
     font-weight: bold;
-    letter-spacing: clamp(1px, 1.7px, 0.35vw);
+    letter-spacing: clamp(1px, 1.7px, 0.2vw);
 }
 
 #hd_smalltext {

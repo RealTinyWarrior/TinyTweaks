@@ -2,7 +2,7 @@ import HomeLeftBoard from "@components/HomeLeftBoard";
 import StickyBar from "@components/Stickybar";
 import Navbar from "@components/Navbar";
 import dynamic from "next/dynamic";
-import head from "@styles/home.module.css";
+import head from "@styles/header.module.css";
 import HomeRecent from "@components/HomeRecent";
 import HomeInput from "@components/HomeInput";
 

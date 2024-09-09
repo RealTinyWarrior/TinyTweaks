@@ -1,6 +1,6 @@
 "use client";
 
-import style from "@styles/home.module.css";
+import style from "@styles/header.module.css";
 import React, { useState } from "react";
 import { recent } from "@data";
 import "@styles/apps_slider.css";

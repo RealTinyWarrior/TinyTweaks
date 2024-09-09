@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import style from "@styles/home.module.css";
+import style from "@styles/header.module.css";
 import DiscordStatus from "./DiscordStatus";
 import Image from "next/image";
 import cloud_banner from "@images/cloud_banner.webp";

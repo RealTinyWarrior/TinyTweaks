@@ -1,4 +1,4 @@
-import style from "@styles/home.module.css";
+import style from "@styles/header.module.css";
 import { pointerOfNav } from "@data";
 import banner from "@images/nav_banner.png";
 import dynamic from "next/dynamic";
