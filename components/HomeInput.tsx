@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { SiGnubash } from "react-icons/si";
 import { TbCubeSend } from "react-icons/tb";
 import { command, locations, customCommands } from "@data";

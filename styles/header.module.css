@@ -22,7 +22,7 @@
 #home_details {
     height: 100%;
     width: 92%;
-    max-width: 340px;
+    max-width: 300px;
     font-family: "Play", sans-serif;
     margin-left: 2%;
     color: var(--font-color);
@@ -106,7 +106,6 @@
 }
 
 #text_place {
-    display: inline-grid;
     position: relative;
     font-size: clamp(2px, 10vw, 40px);
     left: clamp(1vw, 5px, 2vw);
@@ -132,7 +131,7 @@
 
 #w_text_c {
     width: 94vw;
-    max-width: 1640px;
+    max-width: 1280px;
     height: clamp(1px, 12vw, 53px);
     display: flex;
     border-radius: 19px;
@@ -212,7 +211,7 @@
 #tcb_hold {
     width: 92%;
     height: 47.5%;
-    max-width: 980px;
+    max-width: 960px;
     box-shadow: 0 0 clamp(1px, 4px, 0.8vw) clamp(1px, 4px, 0.8vw) rgba(0, 0, 0, 0.6);
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: clamp(1px, 15px, 3vw);
@@ -303,7 +302,7 @@
 
 .recent_description {
     height: 50%;
-    line-height: clamp(1px, 23px, 4.1vw);
+    line-height: clamp(1px, 21px, 5vw);
     margin: 3%;
     display: flex;
     font-size: clamp(1px, 18px, 3.8vw);
@@ -458,7 +457,8 @@
     background: linear-gradient(to right, rgb(83, 126, 244) 3.8%, rgb(158, 70, 206));
     border-radius: 2px;
     font-size: clamp(1px, 14px, 2.5vw);
-    color: black;
+    color: white;
+    font-weight: 600;
 }
 
 #home_in1 input:focus,
@@ -589,17 +589,14 @@
 
     #home_content_box {
         height: 67%;
+        column-gap: 20px;
     }
 
-    #home_recent {
-        height: 101%;
-        width: 29%;
-        max-width: 610px;
-    }
+    /* home_recent */
 
     #tcb_hold {
         height: 101%;
-        width: 57%;
+        width: 76%;
     }
 
     #top_cont_board {

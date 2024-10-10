@@ -3,8 +3,8 @@ import StickyBar from "@components/Stickybar";
 import Navbar from "@components/Navbar";
 import dynamic from "next/dynamic";
 import head from "@styles/header.module.css";
-import HomeRecent from "@components/HomeRecent";
 import HomeInput from "@components/HomeInput";
+import PageNav from "@components/PageNav";
 
 const DisplayShow = dynamic(() => import("@components/DisplayShow"), { ssr: false });
 
@@ -33,11 +33,11 @@ const Home = () => {
                             <div id={head.tcb_contentbox}>
                                 <div id={head.home_details}>
                                     <p id={head.hd_smalltext}>TinyTweaks</p>
-                                    <p id={head.hd_title}>HI, I'M TINY!</p>
+                                    <p id={head.hd_title}>HI, I'M TAHMID!</p>
 
                                     <p id={head.home_desc}>
-                                        Welcome to TinyTweaks! I'm TinyWarrior, a person who heavily enjoys
-                                        programming. I made this website to share my projects online!
+                                        Welcome to TinyTweaks! I'm Tahmid, often referred to as TinyWarrior, a
+                                        passionate software developer.
                                     </p>
                                 </div>
 
@@ -48,7 +48,7 @@ const Home = () => {
                         <HomeInput ui={"small"} />
                     </div>
 
-                    <HomeRecent />
+                    <PageNav />
                 </div>
             </div>
         </>
