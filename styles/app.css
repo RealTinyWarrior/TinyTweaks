@@ -37,7 +37,7 @@ body {
     --nav-bng: linear-gradient(39deg, #3232f5, #41b7fb, #85d2ff 94.2%, blue 1%);
     --nav-shadow: 0.02em 0.02em 0 rgba(100, 100, 255, 0.5), 0.05em 0.05em 0 rgba(70, 70, 70, 1);
     --nav-button: white;
-    --nav-style: rgb(216, 215, 246);
+    --nav-style: rgb(227, 227, 248);
 }
 
 body.dark {

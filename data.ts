@@ -5,17 +5,6 @@ import visicord_back from '@images/recent/visicord_background.jpg'
 import calc_tinytweaks from '@images/recent/calc_tinytweaks.svg'
 import calc_background from '@images/recent/calc_background.webp'
 
-export const pointerOfNav: CSSProperties = {
-    background: "linear-gradient(orange, red)",
-    boxShadow: "0 0 clamp(0.1px, 5px, 1vw) clamp(0.1px, 2px, 0.4vw) black",
-};
-
-type LangType = {
-    url: string;
-    text: string;
-    go: string;
-}[];
-
 type Recent = {
     name: string;
     date: string;
@@ -28,51 +17,34 @@ type Recent = {
     buttonColor: string;
 }[]
 
+export const pointerOfNav: CSSProperties = {
+    background: "linear-gradient(orange, red)",
+    boxShadow: "0 0 clamp(0.1px, 5px, 1vw) clamp(0.1px, 2px, 0.4vw) black",
+};
+
+
 export const command: string[] = ["barrelroll", "visicord"];
 export const customCommands: string[] = ['barrelroll'];
 export const locations: string[] = ["none", 'https://visicord.vercel.app/'];
 
-export const langLinks: LangType = [
-    {
-        url: "https://cdn3.emoji.gg/emojis/2057-javascript-logo.png",
-        text: "JavaScript",
-        go: "https://www.javascript.com",
-    },
-    {
-        url: "https://cdn3.emoji.gg/emojis/9873-python-logo.png",
-        text: "Python",
-        go: "https://www.python.org",
-    },
-    {
-        url: "https://cdn3.emoji.gg/emojis/3203-reactjs.png",
-        text: "React",
-        go: "https://www.react.com",
-    },
-    {
-        url: "https://cdn3.emoji.gg/emojis/7106-csharp.png",
-        text: "CSharp",
-        go: "https://dotnet.microsoft.com/en-us/languages/csharp",
-    },
-];
-
 export const textArray: string[] = [
-    "Howdy Folks!",
     "Hiiiiii!",
     "Greetings ;)",
-    "Made By TinyWarrior :)",
-    "Hello There!",
+    "Developed By TinyWarrior :)",
+    "Hello there!",
     "What's up?",
-    "Hi Friend!",
-    "Welcome Here!:)",
+    "Hi friend!",
+    "Welcome here! :)",
     "Welcome to my website!",
-    "o_O",
     "Do people even read these?",
-    "Aha! A Human! Hello :)",
-    "Look, I'm glowing!",
+    "Aha! A human! Hello :)",
     "Nice to meet you :)",
     "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
     "Thanks for visiting :)",
     "Glad to see you here!",
+    "Hey there!",
+    "Check out my projects!",
+    "Smashing my keyboard!"
 ];
 
 export const emojies: string[] = [
@@ -111,6 +83,8 @@ export const emojies: string[] = [
     ":'(",
     "T_T",
     ";-;",
+    ":3",
+    ">:)"
 ];
 
 export const recent: Recent = [
