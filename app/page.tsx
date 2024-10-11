@@ -31,7 +31,7 @@ const Home = () => {
                             <HomeLeftBoard />
 
                             <div id={head.tcb_contentbox}>
-                                <div id={head.home_details}>
+                                <main id={head.home_details}>
                                     <p id={head.hd_smalltext}>TinyTweaks</p>
                                     <p id={head.hd_title}>HI, I'M TAHMID!</p>
 
@@ -39,7 +39,7 @@ const Home = () => {
                                         Welcome to TinyTweaks! I'm Tahmid, often referred to as TinyWarrior, a
                                         passionate software developer.
                                     </p>
-                                </div>
+                                </main>
 
                                 <HomeInput ui={"large"} />
                             </div>
