@@ -30,7 +30,7 @@ const Home = () => {
                         <div id={head.top_cont_board}>
                             <HomeLeftBoard />
 
-                            <div id={head.tcb_contentbox}>
+                            <div role="main" id={head.tcb_contentbox}>
                                 <main id={head.home_details}>
                                     <p id={head.hd_smalltext}>TinyTweaks</p>
                                     <p id={head.hd_title}>HI, I'M TAHMID!</p>

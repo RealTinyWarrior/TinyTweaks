@@ -21,7 +21,7 @@ const Navbar = ({ place }: Props) => {
                         TinyTweaks <Emoji />
                     </h1>
 
-                    <nav id={style.nav_navigation}>
+                    <nav role="navigation" id={style.nav_navigation}>
                         {["home", "blogs", "apps"].map((elm) => (
                             <Link
                                 key={elm}
