@@ -30,7 +30,7 @@
 }
 
 .box:hover {
-    box-shadow: -165px 0 0 0 var(--nav-style) inset;
+    box-shadow: -185px 0 0 0 var(--nav-style) inset;
 }
 
 @media only screen and (min-width: 960px) {
