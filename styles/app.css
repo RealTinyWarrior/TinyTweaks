@@ -38,7 +38,7 @@ body {
     --nav-shadow: 0.02em 0.02em 0 rgba(100, 100, 255, 0.5), 0.05em 0.05em 0 rgba(70, 70, 70, 1);
     --nav-button: white;
     --nav-style: rgb(227, 227, 248);
-    --name-color: #555c64;
+    --name-color: #474b50;
 }
 
 body.dark {
