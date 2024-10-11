@@ -25,7 +25,7 @@ const StickyBar = ({ place }: Props) => {
                 <span className="select-none">&nbsp;</span>
                 <Icon place={place} />
 
-                <p>
+                <p role="heading">
                     {" "}
                     <span className="select-none">&nbsp;</span>
                     {place[0].toUpperCase() + place.slice(1)}

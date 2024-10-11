@@ -13,11 +13,11 @@ const Navbar = ({ place }: Props) => {
         <>
             <div id={style.nav_style}>
                 <Link href="/" id={style.nav_logo_cont}>
-                    <Image priority src={banner} alt="Website Banner" id={style.nav_logo} />
+                    <Image role="banner" priority src={banner} alt="Website Banner" id={style.nav_logo} />
                 </Link>
 
                 <div id={style.nav_cont}>
-                    <h1 id={style.nav_title}>
+                    <h1 role="heading" id={style.nav_title}>
                         TinyTweaks <Emoji />
                     </h1>
 
@@ -25,6 +25,7 @@ const Navbar = ({ place }: Props) => {
                         {["home", "blogs", "apps"].map((elm) => (
                             <Link
                                 key={elm}
+                                role="link"
                                 className="select-none"
                                 href={`/${elm === "home" ? "/" : elm}`}
                                 style={elm === place ? pointerOfNav : {}}

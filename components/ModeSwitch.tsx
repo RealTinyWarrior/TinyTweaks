@@ -15,7 +15,7 @@ const ModeSwitch = () => {
     }, []);
 
     return (
-        <div id={style.mode_switch} onClick={changeTheme}>
+        <div role="button" id={style.mode_switch} onClick={changeTheme}>
             <div></div>
         </div>
     );

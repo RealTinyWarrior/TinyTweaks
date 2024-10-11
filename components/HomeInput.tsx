@@ -21,13 +21,7 @@ const HomeInput = ({ ui }: { ui: "small" | "large" }) => {
     return (
         <div id={style[`home_in${ui === "small" ? "1" : "2"}`]}>
             <div>
-                <input
-                    onChange={(e) => setValue(e.target.value)}
-                    value={value}
-                    title=""
-                    type="text"
-                    required
-                />
+                <input onChange={(e) => setValue(e.target.value)} value={value} type="text" required />
 
                 <span>
                     &nbsp;&nbsp;Type <TextComponent text={initialCmd} />
@@ -35,9 +29,11 @@ const HomeInput = ({ ui }: { ui: "small" | "large" }) => {
                 </span>
 
                 <SiGnubash id={style.bash_icon_logo} />
+
                 <section
                     id={style.send_input}
                     title="Send input"
+                    role="button"
                     onClick={() => inputEffect(value, getRandomCmd, (val) => setValue(val))}
                 >
                     <TbCubeSend id={style.send_input_icon} />
