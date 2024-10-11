@@ -472,7 +472,7 @@
 #home_in2 span {
     position: absolute;
     font-family: "Play", sans-serif;
-    color: #344052;
+    color: var(--name-color);
     transition: 0.5s;
     margin-left: clamp(14%, 4.2vw, 90px);
     font-size: clamp(1px, 18px, 3vw);
@@ -530,7 +530,7 @@
 
 #hd_smalltext {
     margin: 0;
-    color: #555c64;
+    color: var(--name-color);
     font-size: clamp(1px, 16px, 4vw);
 }
 
