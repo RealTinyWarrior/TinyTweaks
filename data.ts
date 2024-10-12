@@ -2,8 +2,6 @@ import { CSSProperties } from "react";
 import { StaticImageData } from "next/image";
 import visicord_icon from '@images/recent/visicord_icon.svg'
 import visicord_back from '@images/recent/visicord_background.jpg'
-import calc_tinytweaks from '@images/recent/calc_tinytweaks.svg'
-import calc_background from '@images/recent/calc_background.webp'
 
 type Recent = {
     name: string;
@@ -98,17 +96,5 @@ export const recent: Recent = [
         background: visicord_back,
         link: "https://visicord.vercel.app",
         description: "Try out some Discord APIs without having to write a single line of code or having to join a server!",
-    },
-
-    {
-        name: "Calculator",
-        date: "August 5, 2022",
-        icon: calc_tinytweaks,
-        border: "#8c52ff",
-        iconBorder: "white",
-        background: calc_background,
-        buttonColor: "rgba(119, 51, 255,0.7)",
-        link: "https://calc-tinytweaks.vercel.app/",
-        description: "One of my first React projects ever, a simple Calculator, doesn't have that many functionalities but it does the job."
-    },
+    }
 ]
