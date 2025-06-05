@@ -154,7 +154,6 @@
     position: relative;
     bottom: clamp(1px, 15vw, 58px);
     padding-top: clamp(1px, 15vw, 58px);
-    transition: background-image 0.3s;
 }
 
 #home_center_text {
