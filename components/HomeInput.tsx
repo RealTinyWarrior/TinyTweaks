@@ -18,7 +18,7 @@ const HomeInput = ({ ui }: { ui: "small" | "large" }) => {
     return (
         <div id={style[`home_in${ui === "small" ? "1" : "2"}`]}>
             <div>
-                <input onChange={(e) => setValue(e.target.value)} value={value} type="text" />
+                <input onChange={(e) => setValue(e.target.value)} value={value} type="text" required />
 
                 <span>
                     &nbsp;&nbsp;Type <TextComponent text={initialCmd} />
