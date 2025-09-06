@@ -12,13 +12,22 @@ const TextComponent = dynamic(() => import("@components/HomeInputText.tsx"), { s
 const HomeInput = ({ ui }: { ui: "small" | "large" }) => {
     const [value, setValue] = useState("");
 
-    const getRandomCmd = () => setInitialCmd("'" + command[Math.round(Math.random() * (command.length - 1))] + "'");
-    const [initialCmd, setInitialCmd] = useState("'" + command[Math.round(Math.random() * (command.length - 1))] + "'");
+    const getRandomCmd = () =>
+        setInitialCmd("'" + command[Math.round(Math.random() * (command.length - 1))] + "'");
+    const [initialCmd, setInitialCmd] = useState(
+        "'" + command[Math.round(Math.random() * (command.length - 1))] + "'"
+    );
 
     return (
         <div id={style[`home_in${ui === "small" ? "1" : "2"}`]}>
             <div>
-                <input onChange={(e) => setValue(e.target.value)} value={value} type="text" required />
+                <input
+                    onChange={(e) => setValue(e.target.value)}
+                    value={value}
+                    type="text"
+                    required
+                    title=""
+                />
 
                 <span>
                     &nbsp;&nbsp;Type <TextComponent text={initialCmd} />
