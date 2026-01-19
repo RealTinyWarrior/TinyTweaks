@@ -10,8 +10,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-    themeColor: "white",
-    colorScheme: "dark",
+    colorScheme: "light dark",
 };
 
 const RootLayout = ({ children }: { children: React.ReactElement }) => {

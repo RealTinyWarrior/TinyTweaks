@@ -1,12 +1,10 @@
 import HomeLeftBoard from "@components/HomeLeftBoard";
 import StickyBar from "@components/Stickybar";
 import Navbar from "@components/Navbar";
-import dynamic from "next/dynamic";
 import head from "@styles/header.module.css";
 import HomeInput from "@components/HomeInput";
 import PageNav from "@components/PageNav";
-
-const DisplayShow = dynamic(() => import("@components/DisplayShow"), { ssr: false });
+import DisplayContainer from "@components/DisplayContainer";
 
 const Home = () => {
     return (
@@ -15,15 +13,7 @@ const Home = () => {
             <StickyBar place="home" />
 
             <div id={head.display_show}>
-                <div id={head.home_center_text}>
-                    <div id={head.w_text_c}>
-                        <p>
-                            <span className="select-none">&nbsp;</span>
-                            <DisplayShow />
-                            <span>_</span>
-                        </p>
-                    </div>
-                </div>
+                <DisplayContainer />
 
                 <div id={head.home_content_box}>
                     <div id={head.tcb_hold}>

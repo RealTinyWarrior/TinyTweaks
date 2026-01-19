@@ -1,11 +1,10 @@
 import style from "@styles/header.module.css";
 import { pointerOfNav } from "@data";
 import banner from "@images/nav_banner.png";
-import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
+import Emoji from "./Emoji";
 
-const Emoji = dynamic(() => import("@components/Emoji"), { ssr: false });
 type Props = { place: "home" | "blogs" | "apps" };
 
 const Navbar = ({ place }: Props) => {

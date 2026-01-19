@@ -5,18 +5,15 @@ import { SiGnubash } from "react-icons/si";
 import { TbCubeSend } from "react-icons/tb";
 import { command, locations, customCommands } from "@data";
 import style from "@styles/header.module.css";
-import dynamic from "next/dynamic";
-
-const TextComponent = dynamic(() => import("@components/HomeInputText.tsx"), { ssr: false });
 
 const HomeInput = ({ ui }: { ui: "small" | "large" }) => {
     const [value, setValue] = useState("");
+    const [initialCmd, setInitialCmd] = useState("");
 
     const getRandomCmd = () =>
         setInitialCmd("'" + command[Math.round(Math.random() * (command.length - 1))] + "'");
-    const [initialCmd, setInitialCmd] = useState(
-        "'" + command[Math.round(Math.random() * (command.length - 1))] + "'"
-    );
+
+    useEffect(getRandomCmd, []);
 
     return (
         <div id={style[`home_in${ui === "small" ? "1" : "2"}`]}>
@@ -30,7 +27,7 @@ const HomeInput = ({ ui }: { ui: "small" | "large" }) => {
                 />
 
                 <span>
-                    &nbsp;&nbsp;Type <TextComponent text={initialCmd} />
+                    &nbsp;&nbsp;Type {initialCmd}
                     &nbsp;&nbsp;
                 </span>
 

@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    experimental: {
+        browserDebugInfoInTerminal: true,
+    },
+};
 
 module.exports = nextConfig;

@@ -1,67 +1,59 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { textArray } from "@data";
 
-let isClearing = true;
+type WritingStep = "write" | "write pause" | "delete" | "delete pause";
 
 const DisplayShow = () => {
-    let text = textArray[Math.round(Math.random() * (textArray.length - 1))];
-    const [sayText, setSayText] = useState(text);
+    const text = useRef("");
+    const writingStep = useRef<WritingStep>("delete pause");
+    const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+    const [renderedText, setRenderedText] = useState("");
+
+    const assignRandomText = () => (text.current = textArray[Math.floor(Math.random() * textArray.length)]);
 
     useEffect(() => {
-        function repeatView() {
-            if (isClearing) {
-                let removeInv = setInterval(() => {
-                    if (!isClearing) return;
-                    let sayTextN = "0";
+        assignRandomText();
+        setRenderedText(text.current);
 
-                    setSayText((prev) =>
-                        (function () {
-                            sayTextN = prev;
-                            return prev;
-                        })()
-                    );
+        function tick() {
+            if (writingStep.current == "write") timeoutRef.current = setTimeout(tick, 150);
+            else if (writingStep.current == "write pause") timeoutRef.current = setTimeout(tick, 1200);
+            else if (writingStep.current == "delete") timeoutRef.current = setTimeout(tick, 75);
+            else if (writingStep.current == "delete pause") timeoutRef.current = setTimeout(tick, 500);
 
-                    if (sayTextN !== "") setSayText((prev) => prev.slice(0, prev.length - 1));
-                    else {
-                        text = textArray[Math.round(Math.random() * (textArray.length - 1))];
-                        clearInterval(removeInv);
-                        isClearing = false;
-
-                        setTimeout(repeatView, 1000);
+            if (writingStep.current == "write")
+                setRenderedText((prev) => {
+                    if (prev === text.current) {
+                        writingStep.current = "write pause";
+                        return prev;
                     }
-                }, 120);
-            } else {
-                let writeInv = setInterval(() => {
-                    if (isClearing) return;
-                    let sayTextN = "0";
 
-                    setSayText((prev) =>
-                        (function () {
-                            sayTextN = prev;
-                            return prev;
-                        })()
-                    );
-
-                    if (sayTextN !== text) setSayText((prev) => text.slice(0, prev.length + 1));
-                    else {
-                        text = textArray[Math.round(Math.random() * (textArray.length - 1))];
-                        clearInterval(writeInv);
-                        isClearing = true;
-
-                        setTimeout(repeatView, 500);
+                    return text.current.slice(0, prev.length + 1);
+                });
+            else if (writingStep.current == "write pause") writingStep.current = "delete";
+            else if (writingStep.current == "delete")
+                setRenderedText((prev) => {
+                    if (prev === "") {
+                        writingStep.current = "delete pause";
+                        assignRandomText();
+                        return prev;
                     }
-                }, 150);
-            }
+
+                    return text.current.slice(0, prev.length - 1);
+                });
+            else if (writingStep.current == "delete pause") writingStep.current = "write";
         }
 
-        setTimeout(() => {
-            repeatView();
-        }, 2000);
+        setTimeout(tick, 250);
+
+        return () => {
+            if (timeoutRef.current) clearTimeout(timeoutRef.current);
+        };
     }, []);
 
-    return <>{sayText}</>;
+    return <>{renderedText}</>;
 };
 
 export default DisplayShow;

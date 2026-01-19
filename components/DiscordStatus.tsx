@@ -1,6 +1,3 @@
-"use client";
-
-import React from "react";
 import { FaCircle } from "react-icons/fa";
 import { PiMoonStarsDuotone } from "react-icons/pi";
 import { SiVisualstudiocode } from "react-icons/si";

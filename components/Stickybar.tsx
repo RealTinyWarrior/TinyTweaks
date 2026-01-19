@@ -4,7 +4,6 @@ import { TbAppsOff } from "react-icons/tb";
 import ModeSwitch from "./ModeSwitch.tsx";
 import lightdark from "@images/lightdark.svg";
 import Image from "next/image";
-import React from "react";
 import style from "@styles/header.module.css";
 
 type Props = { place: "home" | "blogs" | "apps" };
@@ -36,7 +35,6 @@ const StickyBar = ({ place }: Props) => {
                 <ModeSwitch />
 
                 <Image
-                    priority
                     alt="sun logo"
                     draggable="false"
                     className="select-none"
