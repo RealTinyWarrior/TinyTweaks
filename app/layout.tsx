@@ -1,6 +1,7 @@
 import LinkFonts from "@components/LinkFonts";
 import { Metadata, Viewport } from "next";
 import "@styles/app.css";
+import { ReactNode } from "react";
 
 export const metadata: Metadata = {
     title: "Home - TinyTweaks",
@@ -13,7 +14,7 @@ export const viewport: Viewport = {
     colorScheme: "light dark",
 };
 
-const RootLayout = ({ children }: { children: React.ReactElement }) => {
+const RootLayout = ({ children }: { children: ReactNode }) => {
     return (
         <html lang="en">
             <LinkFonts />
