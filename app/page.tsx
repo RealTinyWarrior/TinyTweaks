@@ -6,7 +6,7 @@ import HomeInput from "@components/HomeInput";
 import PageNav from "@components/PageNav";
 import DisplayContainer from "@components/DisplayContainer";
 
-const Home = () => {
+const HomePage = () => {
     return (
         <>
             <Navbar place="home" />
@@ -45,4 +45,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default HomePage;
