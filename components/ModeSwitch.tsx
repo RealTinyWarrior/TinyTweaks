@@ -16,7 +16,7 @@ const ModeSwitch = () => {
     }, []);
 
     return (
-        <div role="button" id={style.mode_switch} onClick={changeTheme}>
+        <div role="button" id={style.mode_switch} onClick={changeTheme} aria-label="Toggle theme">
             <div></div>
         </div>
     );

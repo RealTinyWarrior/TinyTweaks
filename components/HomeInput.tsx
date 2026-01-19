@@ -24,6 +24,7 @@ const HomeInput = ({ ui }: { ui: "small" | "large" }) => {
                     type="text"
                     required
                     title=""
+                    aria-label="Type command"
                 />
 
                 <span>
