@@ -41,6 +41,8 @@ const HomePage = () => {
                     <PageNav />
                 </div>
             </div>
+
+            <p id={head.under_dev}>Route '/' is under development</p>
         </>
     );
 };

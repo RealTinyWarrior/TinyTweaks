@@ -538,6 +538,16 @@
     font-size: clamp(1px, 14px, 3.5vw);
 }
 
+#under_dev {
+    text-align: center;
+    font-size: 36px;
+    color: darkgray;
+    font-family: "Play", sans-serif;
+    font-weight: 600;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
 @keyframes visual {
     0% {
         opacity: 1;
