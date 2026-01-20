@@ -541,8 +541,8 @@
 #under_dev {
     text-align: center;
     font-size: 36px;
-    color: var(--font-color);
     font-family: "Play", sans-serif;
+    color: var(--font-color);
     font-weight: 600;
     margin-left: 2%;
     margin-right: 2%;
