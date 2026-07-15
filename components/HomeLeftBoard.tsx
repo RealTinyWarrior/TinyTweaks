@@ -20,12 +20,13 @@ const HomeLeftBoard = () => {
     const [details, setDetails] = useState("");
 
     React.useEffect(() => {
+        const resizeFunction = () => {
+            setBoxState(boxRef.current ? boxRef.current.clientHeight : 0);
+        };
+
         async function getData() {
             setBoxState(boxRef.current ? boxRef.current.clientHeight : 0);
-
-            window.addEventListener("resize", () => {
-                setBoxState(boxRef.current ? boxRef.current.clientHeight : 0);
-            });
+            window.addEventListener("resize", resizeFunction);
 
             const jsonData = await fetch("https://api.lanyard.rest/v1/users/906968333646168084");
             const { data }: { data: StatusData } = await jsonData.json();
@@ -38,20 +39,24 @@ const HomeLeftBoard = () => {
                     ? data.activities[statusIndex].name == "Visual Studio Code"
                         ? "code"
                         : "game"
-                    : data.discord_status
+                    : data.discord_status,
             );
 
             setStatusText(
                 data.activities.length > statusIndex
                     ? data.activities[statusIndex].name
                     : data.discord_status[0].toUpperCase() +
-                          data.discord_status.slice(1, data.discord_status.length)
+                          data.discord_status.slice(1, data.discord_status.length),
             );
 
             setDetails(data.activities.length > statusIndex ? data.activities[0].details : "");
         }
 
         getData();
+
+        return () => {
+            window.removeEventListener("resize", resizeFunction);
+        };
     }, []);
 
     return (
