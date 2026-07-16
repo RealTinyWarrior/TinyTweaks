@@ -12,7 +12,7 @@ const Navbar = ({ place }: Props) => {
         <>
             <div id={style.nav_style}>
                 <Link href="/" id={style.nav_logo_cont}>
-                    <Image role="banner" priority src={banner} alt="Website Banner" id={style.nav_logo} />
+                    <Image priority src={banner} alt="Website Banner" id={style.nav_logo} />
                 </Link>
 
                 <div id={style.nav_cont}>

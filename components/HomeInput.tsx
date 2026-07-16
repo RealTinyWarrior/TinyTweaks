@@ -38,9 +38,10 @@ const HomeInput = ({ ui }: { ui: "small" | "large" }) => {
                     id={style.send_input}
                     title="Send input"
                     role="button"
+                    aria-label="Send input"
                     onClick={() => inputEffect(value, getRandomCmd, (val) => setValue(val))}
                 >
-                    <TbCubeSend id={style.send_input_icon} />
+                    <TbCubeSend id={style.send_input_icon} aria-hidden="true" focusable="false" />
                 </section>
             </div>
         </div>
