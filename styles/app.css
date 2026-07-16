@@ -19,10 +19,22 @@
     }
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
     background-color: var(--webcolor);
     scroll-behavior: smooth;
     --home-lazyload: rgb(41, 112, 228);
@@ -41,7 +53,7 @@ body {
     --name-color: #474b50;
 }
 
-body.dark {
+html.dark {
     --home-lazyload: rgb(76, 1, 128);
     --home-image: url(../images/dark_banner.png);
     --cboard-color: #0c0b16;

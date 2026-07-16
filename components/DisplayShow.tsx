@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { textArray } from "@data";
+import { textArray } from "@/data";
 
 type WritingStep = "write" | "write pause" | "delete" | "delete pause";
 

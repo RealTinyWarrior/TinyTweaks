@@ -1,10 +1,10 @@
-import HomeLeftBoard from "@components/HomeLeftBoard";
-import StickyBar from "@components/Stickybar";
-import Navbar from "@components/Navbar";
-import head from "@styles/header.module.css";
-import HomeInput from "@components/HomeInput";
-import PageNav from "@components/PageNav";
-import DisplayContainer from "@components/DisplayContainer";
+import HomeLeftBoard from "@/components/HomeLeftBoard";
+import StickyBar from "@/components/Stickybar";
+import Navbar from "@/components/Navbar";
+import head from "@/styles/header.module.css";
+import HomeInput from "@/components/HomeInput";
+import PageNav from "@/components/PageNav";
+import DisplayContainer from "@/components/DisplayContainer";
 
 const HomePage = () => {
     return (

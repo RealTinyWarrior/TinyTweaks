@@ -25,11 +25,11 @@
     box-shadow: -6px 0 0 0 var(--nav-style) inset;
     border: 0.01px solid var(--nav-style);
     cursor: pointer;
-    transition: box-shadow 800ms;
+    transition: box-shadow 400ms;
 }
 
 .box:hover {
-    box-shadow: -185px 0 0 0 var(--nav-style) inset;
+    box-shadow: -230px 0 0 0 var(--nav-style) inset;
 }
 
 @media only screen and (min-width: 960px) {
@@ -38,16 +38,21 @@
         width: 40px;
         bottom: 0;
         flex-direction: column;
-        justify-content: start;
-        gap: 0;
+        align-items: stretch;
+        gap: 5px;
         padding: 5px;
     }
 
     .box {
         width: 40px;
         height: 40px;
-        margin-bottom: 5px;
         flex-direction: column;
         flex-grow: 0;
+        flex: 1;
+        box-shadow: 0 -6px 0 0 var(--nav-style) inset;
+    }
+
+    .box:hover {
+        box-shadow: 0 -115px 0 0 var(--nav-style) inset;
     }
 }

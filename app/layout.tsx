@@ -1,7 +1,8 @@
-import LinkFonts from "@components/LinkFonts";
+import LinkFonts from "@/components/LinkFonts";
 import { Metadata, Viewport } from "next";
-import "@styles/app.css";
 import { ReactNode } from "react";
+import Script from "next/script";
+import "@/styles/app.css";
 
 export const metadata: Metadata = {
     title: "Home - TinyTweaks",
@@ -16,9 +17,21 @@ export const viewport: Viewport = {
 
 const RootLayout = ({ children }: { children: ReactNode }) => {
     return (
-        <html lang="en">
+        <html suppressHydrationWarning lang="en">
             <LinkFonts />
-            <body>{children}</body>
+            <body>
+                <Script id="theme-script" strategy="beforeInteractive">
+                    {`
+                        try {
+                            if (localStorage.getItem('theme') === 'dark') {
+                                document.documentElement.classList.add("dark");
+                            }
+                        } catch {}
+                    `}
+                </Script>
+
+                {children}
+            </body>
         </html>
     );
 };

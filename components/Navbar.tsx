@@ -1,6 +1,6 @@
-import style from "@styles/header.module.css";
-import { pointerOfNav } from "@data";
-import banner from "@images/nav_banner.png";
+import style from "@/styles/header.module.css";
+import { pointerOfNav } from "@/data";
+import banner from "@/images/nav_banner.png";
 import Image from "next/image";
 import Link from "next/link";
 import Emoji from "./Emoji";

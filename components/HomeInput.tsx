@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react";
 import { SiGnubash } from "react-icons/si";
 import { TbCubeSend } from "react-icons/tb";
-import { command, locations, customCommands } from "@data";
-import style from "@styles/header.module.css";
+import { command, locations, customCommands } from "@/data";
+import style from "@/styles/header.module.css";
 
 const HomeInput = ({ ui }: { ui: "small" | "large" }) => {
     const [value, setValue] = useState("");

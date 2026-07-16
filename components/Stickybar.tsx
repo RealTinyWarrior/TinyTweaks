@@ -2,9 +2,9 @@ import { CgFileDocument } from "react-icons/cg";
 import { HiCode } from "react-icons/hi";
 import { TbAppsOff } from "react-icons/tb";
 import ModeSwitch from "./ModeSwitch.tsx";
-import lightdark from "@images/lightdark.svg";
+import lightdark from "@/images/lightdark.svg";
 import Image from "next/image";
-import style from "@styles/header.module.css";
+import style from "@/styles/header.module.css";
 
 type Props = { place: "home" | "blogs" | "apps" };
 

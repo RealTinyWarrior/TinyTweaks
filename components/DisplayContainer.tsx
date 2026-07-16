@@ -1,4 +1,4 @@
-import head from "@styles/header.module.css";
+import head from "@/styles/header.module.css";
 import DisplayShow from "./DisplayShow";
 
 const DisplayContainer = () => {

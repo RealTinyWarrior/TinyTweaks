@@ -1,10 +1,11 @@
-import style from "@styles/pagenav.module.css";
+import Link from "@/node_modules/next/link";
+import style from "@/styles/pagenav.module.css";
 
-const PageNavButton = ({ icon, name }: { icon: React.ReactElement; name: string }) => {
+const PageNavButton = ({ icon, name, id }: { icon: React.ReactElement; name: string; id: string }) => {
     return (
-        <div role="button" title={name} className={style.box}>
+        <Link href={`#${id}`} title={name} className={style.box}>
             {icon}
-        </div>
+        </Link>
     );
 };
 

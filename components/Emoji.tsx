@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { emojies } from "@data";
+import { emojies } from "@/data";
 
 const Emoji = () => {
     const [emoji, setEmoji] = useState("");
